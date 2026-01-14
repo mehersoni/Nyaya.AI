@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# Temporary extraction scripts
+data_parser/definition_extractor.py
+data_parser/definition_formatter.py
+data_parser/section2_raw.txt
+
+# PDFs and raw sources
+data_parser/source_pdfs/
