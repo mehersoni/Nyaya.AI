@@ -42,5 +42,25 @@
     {
         "parent": "CPA_2019_CH3",
         "child": "CPA_2019_S13"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S14"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S15"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S16"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S17"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S18"
     }
 ]
