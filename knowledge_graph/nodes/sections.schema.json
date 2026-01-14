@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LegalSections",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "section_id",
+            "act",
+            "section_number",
+            "text"
+        ],
+        "properties": {
+            "section_id": {
+                "type": "string"
+            },
+            "act": {
+                "type": "string"
+            },
+            "section_number": {
+                "type": "string"
+            },
+            "text": {
+                "type": "string"
+            },
+            "chapter": {
+                "type": "string"
+            },
+            "source_pdf": {
+                "type": "string"
+            },
+            "page_number": {
+                "type": "integer"
+            }
+        },
+        "additionalProperties": false
+    }
+}

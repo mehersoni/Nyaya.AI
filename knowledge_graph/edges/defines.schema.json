@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DefinesEdges",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "section",
+            "term"
+        ],
+        "properties": {
+            "section": {
+                "type": "string"
+            },
+            "term": {
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
+    }
+}
