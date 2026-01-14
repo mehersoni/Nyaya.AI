@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LegalSections",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "section_id",
+            "act",
+            "section_number",
+            "text"
+        ],
+        "properties": {
+            "section_id": {
+                "type": "string",
+                "description": "Globally unique ID (e.g., CPA_2019_S2)"
+            },
+            "act": {
+                "type": "string",
+                "description": "Name of the Act"
+            },
+            "section_number": {
+                "type": "string",
+                "description": "Section number as written in the Act"
+            },
+            "text": {
+                "type": "string",
+                "description": "Verbatim section text"
+            },
+            "chapter": {
+                "type": "string"
+            },
+            "source_pdf": {
+                "type": "string"
+            },
+            "page_number": {
+                "type": "integer"
+            }
+        },
+        "additionalProperties": false
+    }
+}

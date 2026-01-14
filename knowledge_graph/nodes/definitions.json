@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LegalDefinitions",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "term",
+            "definition",
+            "defined_in"
+        ],
+        "properties": {
+            "term": {
+                "type": "string",
+                "description": "Defined legal term"
+            },
+            "definition": {
+                "type": "string",
+                "description": "Verbatim legal definition"
+            },
+            "defined_in": {
+                "type": "string",
+                "description": "section_id where term is defined"
+            }
+        },
+        "additionalProperties": false
+    }
+}
