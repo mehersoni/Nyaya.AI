@@ -23,5 +23,55 @@
         "term": "complainant",
         "definition": "a consumer, or any voluntary consumer association registered under any law for the time being in force, or the Central Government or any State Government, or the Central Authority, or one or more consumers where there are numerous consumers having the same interest, or in case of death of a consumer his legal heir or legal representative, or in case of a consumer being a minor his parent or legal guardian;",
         "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "complaint",
+        "definition": "any allegation in writing, made by a complainant for obtaining any relief provided by or under this Act, that an unfair contract or unfair trade practice or a restrictive trade practice has been adopted by any trader or service provider, or the goods bought or agreed to be bought suffer from one or more defects, or the services hired or availed of suffer from any deficiency, or a trader or service provider has charged a price in excess of the price fixed by law, displayed, or agreed, or hazardous goods or services are being offered for sale, or a claim for product liability action lies;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "consumer",
+        "definition": "any person who buys any goods for a consideration or hires or avails of any service for a consideration, including offline or online transactions, but does not include a person who obtains goods for resale or for any commercial purpose, except where such use is exclusively for earning livelihood by means of self-employment;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "consumer dispute",
+        "definition": "a dispute where the person against whom a complaint has been made denies or disputes the allegations contained in the complaint;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "consumer rights",
+        "definition": "the right to be protected against hazardous goods and services, the right to be informed, the right to access goods and services at competitive prices, the right to be heard, the right to seek redressal, and the right to consumer awareness;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "defect",
+        "definition": "any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard required to be maintained by law or contract in relation to any goods or product;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "complaint",
+        "definition": "any allegation in writing, made by a complainant for obtaining any relief provided by or under this Act, that an unfair contract or unfair trade practice or a restrictive trade practice has been adopted by any trader or service provider, or the goods bought or agreed to be bought suffer from one or more defects, or the services hired or availed of suffer from any deficiency, or a trader or service provider has charged a price in excess of the price fixed by law, displayed, or agreed, or hazardous goods or services are being offered for sale, or a claim for product liability action lies;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "consumer",
+        "definition": "any person who buys any goods for a consideration or hires or avails of any service for a consideration, including offline or online transactions, but does not include a person who obtains goods for resale or for any commercial purpose, except where such use is exclusively for earning livelihood by means of self-employment;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "consumer dispute",
+        "definition": "a dispute where the person against whom a complaint has been made denies or disputes the allegations contained in the complaint;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "consumer rights",
+        "definition": "the right to be protected against hazardous goods and services, the right to be informed, the right to access goods and services at competitive prices, the right to be heard, the right to seek redressal, and the right to consumer awareness;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "defect",
+        "definition": "any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard required to be maintained by law or contract in relation to any goods or product;",
+        "defined_in": "CPA_2019_S2"
     }
 ]
