@@ -1,11 +1,28 @@
-# Python
+# --------------------
+# Python artifacts
+# --------------------
 __pycache__/
 *.pyc
+*.pyo
 
-# Temporary extraction scripts
+# --------------------
+# Local / experimental scripts
+# --------------------
 data_parser/definition_extractor.py
 data_parser/definition_formatter.py
+
+# --------------------
+# Raw text & intermediate dumps
+# --------------------
 data_parser/section2_raw.txt
 
-# PDFs and raw sources
+# --------------------
+# Source documents (PDFs, scans)
+# --------------------
 data_parser/source_pdfs/
+
+# --------------------
+# OS / editor noise
+# --------------------
+.DS_Store
+Thumbs.db
