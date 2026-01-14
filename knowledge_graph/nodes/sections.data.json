@@ -1,42 +1,20 @@
-{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "LegalSections",
-    "type": "array",
-    "items": {
-        "type": "object",
-        "required": [
-            "section_id",
-            "act",
-            "section_number",
-            "text"
-        ],
-        "properties": {
-            "section_id": {
-                "type": "string",
-                "description": "Globally unique ID (e.g., CPA_2019_S2)"
-            },
-            "act": {
-                "type": "string",
-                "description": "Name of the Act"
-            },
-            "section_number": {
-                "type": "string",
-                "description": "Section number as written in the Act"
-            },
-            "text": {
-                "type": "string",
-                "description": "Verbatim section text"
-            },
-            "chapter": {
-                "type": "string"
-            },
-            "source_pdf": {
-                "type": "string"
-            },
-            "page_number": {
-                "type": "integer"
-            }
-        },
-        "additionalProperties": false
+[
+    {
+        "section_id": "CPA_2019_S1",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "1",
+        "text": "1. Short title, extent, commencement and application.",
+        "chapter": "CHAPTER I",
+        "source_pdf": "consumer_protection_act_2019.pdf",
+        "page_number": 1
+    },
+    {
+        "section_id": "CPA_2019_S2",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "2",
+        "text": "2. Definitions.",
+        "chapter": "CHAPTER I",
+        "source_pdf": "consumer_protection_act_2019.pdf",
+        "page_number": 1
     }
-}
+]
