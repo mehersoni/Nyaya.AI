@@ -1,1 +1,34 @@
-[]
+[
+    {
+        "parent": "CPA_2019_CH2",
+        "child": "CPA_2019_S3"
+    },
+    {
+        "parent": "CPA_2019_CH2",
+        "child": "CPA_2019_S4"
+    },
+    {
+        "parent": "CPA_2019_CH2",
+        "child": "CPA_2019_S5"
+    },
+    {
+        "parent": "CPA_2019_CH2",
+        "child": "CPA_2019_S6"
+    },
+    {
+        "parent": "CPA_2019_CH2",
+        "child": "CPA_2019_S7"
+    },
+    {
+        "parent": "CPA_2019_CH2",
+        "child": "CPA_2019_S8"
+    },
+    {
+        "parent": "CPA_2019_CH2",
+        "child": "CPA_2019_S9"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S10"
+    }
+]

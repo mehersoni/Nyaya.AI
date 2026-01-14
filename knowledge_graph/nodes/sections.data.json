@@ -16,5 +16,67 @@
         "chapter": "CHAPTER I",
         "source_pdf": "consumer_protection_act_2019.pdf",
         "page_number": 1
+    },
+    {
+        "section_id": "CPA_2019_S3",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "3",
+        "text": "The Central Government shall, by notification, establish with effect from such date as it may specify in that notification, the Central Consumer Protection Council to be known as the Central Council. The Central Council shall be an advisory council and consist of the Minister-in-charge of the Department of Consumer Affairs in the Central Government, who shall be the Chairperson, and such number of other official or non-official members representing such interests as may be prescribed.",
+        "chapter": "CPA_2019_CH2"
+    },
+    {
+        "section_id": "CPA_2019_S4",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "4",
+        "text": "The Central Council shall meet as and when necessary, but at least one meeting of the Council shall be held every year. The Central Council shall meet at such time and place as the Chairperson may think fit and shall observe such procedure in regard to the transaction of its business as may be prescribed.",
+        "chapter": "CPA_2019_CH2"
+    },
+    {
+        "section_id": "CPA_2019_S5",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "5",
+        "text": "The objects of the Central Council shall be to render advice on promotion and protection of the consumers' rights under this Act.",
+        "chapter": "CPA_2019_CH2"
+    },
+    {
+        "section_id": "CPA_2019_S6",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "6",
+        "text": "Every State Government shall, by notification, establish with effect from such date as it may specify in such notification, a State Consumer Protection Council for such State to be known as the State Council. The State Council shall be an advisory council and consist of the Minister-in-charge of Consumer Affairs in the State Government who shall be the Chairperson, such number of other official or non-official members representing such interests as may be prescribed, and such number of other official or non-official members, not exceeding ten, as may be nominated by the Central Government. The State Council shall meet as and when necessary but not less than two meetings shall be held every year. The State Council shall meet at such time and place as the Chairperson may think fit and shall observe such procedure in regard to the transaction of its business as may be prescribed.",
+        "chapter": "CPA_2019_CH2"
+    },
+    {
+        "section_id": "CPA_2019_S7",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "7",
+        "text": "The objects of every State Council shall be to render advice on promotion and protection of consumer rights under this Act within the State.",
+        "chapter": "CPA_2019_CH2"
+    },
+    {
+        "section_id": "CPA_2019_S8",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "8",
+        "text": "The State Government shall, by notification, establish for every district with effect from such date as it may specify in such notification, a District Consumer Protection Council to be known as the District Council. The District Council shall be an advisory council and consist of the Collector of the district, by whatever name called, who shall be the Chairperson, and such number of other official and non-official members representing such interests as may be prescribed. The District Council shall meet as and when necessary but not less than two meetings shall be held every year. The District Council shall meet at such time and place within the district as the Chairperson may think fit and shall observe such procedure in regard to the transaction of its business as may be prescribed.",
+        "chapter": "CPA_2019_CH2"
+    },
+    {
+        "section_id": "CPA_2019_S9",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "9",
+        "text": "The objects of every District Council shall be to render advice on promotion and protection of consumer rights under this Act within the district.",
+        "chapter": "CPA_2019_CH2"
+    },
+    {
+        "section_id": "CPA_2019_CH3",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "Chapter III",
+        "text": "Central Consumer Protection Authority"
+    },
+    {
+        "section_id": "CPA_2019_S10",
+        "act": "Consumer Protection Act, 2019",
+        "section_number": "10",
+        "text": "The Central Government shall, by notification, establish with effect from such date as it may specify in that notification, a Central Consumer Protection Authority to be known as the Central Authority to regulate matters relating to violation of rights of consumers, unfair trade practices and false or misleading advertisements which are prejudicial to the interests of public and consumers and to promote, protect and enforce the rights of consumers as a class. The Central Authority shall consist of a Chief Commissioner and such number of other Commissioners as may be prescribed, to be appointed by the Central Government to exercise the powers and discharge the functions under this Act. The headquarters of the Central Authority shall be at such place in the National Capital Region of Delhi, and it shall have regional and other offices in any other place in India as the Central Government may decide.",
+        "chapter": "CPA_2019_CH3"
     }
 ]
