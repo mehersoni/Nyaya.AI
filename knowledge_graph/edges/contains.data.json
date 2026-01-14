@@ -62,5 +62,37 @@
     {
         "parent": "CPA_2019_CH3",
         "child": "CPA_2019_S18"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S19"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S20"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S21"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S22"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S23"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S24"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S25"
+    },
+    {
+        "parent": "CPA_2019_CH3",
+        "child": "CPA_2019_S26"
     }
 ]
