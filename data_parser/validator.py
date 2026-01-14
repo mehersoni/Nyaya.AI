@@ -41,7 +41,7 @@ def validate_referential_integrity(root: Path):
     for d in definitions:
         if d["defined_in"] not in section_ids:
             raise ReferentialIntegrityError(
-                f"Definition term '{d['term']}' refers to unknown section '{d['defined_in']}'"
+                f"Definition '{d['term']}' refers to unknown section '{d['defined_in']}'"
             )
 
     # ---- rights ----
@@ -56,16 +56,14 @@ def validate_referential_integrity(root: Path):
     references = _load(root / "knowledge_graph/edges/references.data.json")
     for ref in references:
         if ref["from"] not in section_ids or ref["to"] not in section_ids:
-            raise ReferentialIntegrityError(
-                f"Invalid reference edge: {ref}"
-            )
+            raise ReferentialIntegrityError(f"Invalid reference edge: {ref}")
 
     # ---- defines edges ----
     defines = _load(root / "knowledge_graph/edges/defines.data.json")
     for d in defines:
-        if d["section"] not in section_ids:
+        if d["source"] not in section_ids:
             raise ReferentialIntegrityError(
-                f"Defines edge refers to unknown section '{d['section']}'"
+                f"Defines edge refers to unknown section '{d['source']}'"
             )
 
     # ---- contains edges ----
@@ -75,7 +73,6 @@ def validate_referential_integrity(root: Path):
             raise ReferentialIntegrityError(
                 f"Contains edge refers to unknown child '{c['child']}'"
             )
-
 
 def validate_knowledge_graph(root: Path):
     # Step 2: schema validation

@@ -5,15 +5,24 @@
     "items": {
         "type": "object",
         "required": [
-            "section",
-            "term"
+            "source",
+            "target",
+            "relation"
         ],
         "properties": {
-            "section": {
-                "type": "string"
+            "source": {
+                "type": "string",
+                "description": "Section ID that defines the term/right"
             },
-            "term": {
-                "type": "string"
+            "target": {
+                "type": "string",
+                "description": "Term or Right ID being defined"
+            },
+            "relation": {
+                "type": "string",
+                "enum": [
+                    "defines"
+                ]
             }
         },
         "additionalProperties": false
