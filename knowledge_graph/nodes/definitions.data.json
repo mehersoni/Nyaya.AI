@@ -1,28 +1,27 @@
-{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "LegalDefinitions",
-    "type": "array",
-    "items": {
-        "type": "object",
-        "required": [
-            "term",
-            "definition",
-            "defined_in"
-        ],
-        "properties": {
-            "term": {
-                "type": "string",
-                "description": "Defined legal term"
-            },
-            "definition": {
-                "type": "string",
-                "description": "Verbatim legal definition"
-            },
-            "defined_in": {
-                "type": "string",
-                "description": "section_id where term is defined"
-            }
-        },
-        "additionalProperties": false
+[
+    {
+        "term": "advertisement",
+        "definition": "any audio or visual publicity, representation, endorsement or pronouncement made by means of light, sound, smoke, gas, print, electronic media, internet or website and includes any notice, circular, label, wrapper, invoice or such other documents;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "appropriate laboratory",
+        "definition": "a laboratory or an organisation recognised by the Central Government or recognised by a State Government, subject to such guidelines as may be issued by the Central Government in this behalf, or established by or under any law for the time being in force, which is maintained, financed or aided by the Central Government or a State Government for carrying out analysis or test of any goods with a view to determining whether such goods suffer from any defect;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "branch office",
+        "definition": "any office or place of work described as a branch by the establishment, or any establishment carrying on either the same or substantially the same activity carried on by the head office of the establishment;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "Central Authority",
+        "definition": "the Central Consumer Protection Authority established under section 10;",
+        "defined_in": "CPA_2019_S2"
+    },
+    {
+        "term": "complainant",
+        "definition": "a consumer, or any voluntary consumer association registered under any law for the time being in force, or the Central Government or any State Government, or the Central Authority, or one or more consumers where there are numerous consumers having the same interest, or in case of death of a consumer his legal heir or legal representative, or in case of a consumer being a minor his parent or legal guardian;",
+        "defined_in": "CPA_2019_S2"
     }
-}
+]
