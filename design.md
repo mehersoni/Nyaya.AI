@@ -17,69 +17,69 @@ Nyayamrit is a GraphRAG-based judicial assistant that combines deterministic kno
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
 │                         INPUT LAYER                                 │
-│  ┌────────────────┐  ┌────────────────┐  ┌────────────────┐        │ 
+│  ┌────────────────┐  ┌────────────────┐  ┌────────────────┐         │ 
 │  │ PDF Documents  │  │ User Queries   │  │ Bhashini API   │         │
-│  │ (CPA 2019)     │  │ (NL/Regional)  │  │ (Translation)  │        │
-│  └────────────────┘  └────────────────┘  └────────────────┘        │
+│  │ (CPA 2019)     │  │ (NL/Regional)  │  │ (Translation)  │         │
+│  └────────────────┘  └────────────────┘  └────────────────┘         │
 └─────────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    KNOWLEDGE GRAPH LAYER                             │
+│                    KNOWLEDGE GRAPH LAYER                            │
 │  ┌──────────────────────────────────────────────────────────────┐   │
-│  │  Legal Ontology (Neo4j / JSON)                              │   │
-│  │  • Sections, Clauses, Definitions, Rights                   │   │
-│  │  • Contains, References, Defines edges                      │   │
-│  │  • Amendment tracking with temporal versioning             │   │
+│  │  Legal Ontology (Neo4j / JSON)                               │   │
+│  │  • Sections, Clauses, Definitions, Rights                    │   │
+│  │  • Contains, References, Defines edges                       │   │
+│  │  • Amendment tracking with temporal versioning               │   │
 │  └──────────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    GRAPHRAG REASONING ENGINE                         │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐             │
-│  │ Query Parser │→ │ Graph        │→ │ Context      │             │
-│  │ (Intent)     │  │ Traversal    │  │ Builder      │             │
-│  └──────────────┘  └──────────────┘  └──────────────┘             │
-│                                                                       │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐             │
-│  │ Confidence   │  │ Citation     │  │ Validation   │             │
-│  │ Scorer       │  │ Extractor    │  │ Layer        │             │
-│  └──────────────┘  └──────────────┘  └──────────────┘             │
+│                    GRAPHRAG REASONING ENGINE                        │
+│     ┌──────────────┐  ┌──────────────┐  ┌──────────────┐            │
+│     │ Query Parser │→ │ Graph        │→ │ Context      │            │
+│     │ (Intent)     │  │ Traversal    │  │ Builder      │            │
+│     └──────────────┘  └──────────────┘  └──────────────┘            │
+│                                                                     │
+│     ┌──────────────┐  ┌──────────────┐  ┌──────────────┐            │
+│     │ Confidence   │  │ Citation     │  │ Validation   │            │
+│     │ Scorer       │  │ Extractor    │  │ Layer        │            │
+│     └──────────────┘  └──────────────┘  └──────────────┘            │
 └─────────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────────┐
-│                         LLM LAYER                                    │
+│                         LLM LAYER                                   │
 │  ┌──────────────────────────────────────────────────────────────┐   │
-│  │  LLM Provider (OpenAI GPT-4 / Anthropic Claude)             │   │
-│  │  • Prompt Engineering with retrieved context                │   │
-│  │  • Response generation with citation constraints            │   │
-│  │  • Multi-provider fallback support                          │   │
+│  │  LLM Provider (OpenAI GPT-4 / Anthropic Claude)              │   │
+│  │  • Prompt Engineering with retrieved context                 │   │
+│  │  • Response generation with citation constraints             │   │
+│  │  • Multi-provider fallback support                           │   │
 │  └──────────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────────┘
                               │
                               ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                    PRESENTATION LAYER                                │
+┌───────────────────────────────────────────────────────────────────┐
+│                    PRESENTATION LAYER                             │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐             │
 │  │ Web UI       │  │ REST API     │  │ Mobile UI    │             │
 │  │ (React)      │  │ (FastAPI)    │  │ (Future)     │             │
 │  └──────────────┘  └──────────────┘  └──────────────┘             │
-│                                                                       │
+│                                                                   │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐             │
 │  │ Translation  │  │ Citation     │  │ Feedback     │             │
 │  │ (Bhashini)   │  │ Formatter    │  │ Collection   │             │
 │  └──────────────┘  └──────────────┘  └──────────────┘             │
-└─────────────────────────────────────────────────────────────────────┘
+└───────────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────────┐
-│                    MONITORING & GOVERNANCE                           │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐             │
-│  │ Audit Logs   │  │ Performance  │  │ Quality      │             │
-│  │              │  │ Metrics      │  │ Assurance    │             │
-│  └──────────────┘  └──────────────┘  └──────────────┘             │
+│                    MONITORING & GOVERNANCE                          │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐               │
+│  │ Audit Logs   │  │ Performance  │  │ Quality      │               │
+│  │              │  │ Metrics      │  │ Assurance    │               │
+│  └──────────────┘  └──────────────┘  └──────────────┘               │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -1579,4 +1579,5 @@ Very Low (<0.7):
    Insufficient information to provide reliable answer.
    Please consult official legal sources or a qualified lawyer.
 ```
+
 
