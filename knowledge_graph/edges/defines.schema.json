@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "DefinesEdges",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "source",
+            "target",
+            "relation"
+        ],
+        "properties": {
+            "source": {
+                "type": "string",
+                "description": "Section ID that defines the term/right"
+            },
+            "target": {
+                "type": "string",
+                "description": "Term or Right ID being defined"
+            },
+            "relation": {
+                "type": "string",
+                "enum": [
+                    "defines"
+                ]
+            }
+        },
+        "additionalProperties": false
+    }
+}

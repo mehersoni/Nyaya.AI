@@ -1,0 +1,891 @@
+[
+  {
+    "clause_id": "CPA_2019_S1_list_1",
+    "parent_section": "CPA_2019_S1",
+    "label": "1.",
+    "text": "Short title, extent, commencement and application.",
+    "clause_type": "list_numbered_list"
+  },
+  {
+    "clause_id": "CPA_2019_S2_list_2",
+    "parent_section": "CPA_2019_S2",
+    "label": "2.",
+    "text": "Definitions.",
+    "clause_type": "list_numbered_list"
+  },
+  {
+    "clause_id": "CPA_2019_S3_sent_1",
+    "parent_section": "CPA_2019_S3",
+    "label": "Sentence 1",
+    "text": "The Central Government shall, by notification, establish with effect from such date as it may specify in that notification, the Central Consumer Protection Council to be known as the Central Council.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S3_sent_2",
+    "parent_section": "CPA_2019_S3",
+    "label": "Sentence 2",
+    "text": "The Central Council shall be an advisory council and consist of the Minister-in-charge of the Department of Consumer Affairs in the Central Government, who shall be the Chairperson, and such number of other official or non-official members representing such interests as may be prescribed.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S4_sent_1",
+    "parent_section": "CPA_2019_S4",
+    "label": "Sentence 1",
+    "text": "The Central Council shall meet as and when necessary, but at least one meeting of the Council shall be held every year.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S4_sent_2",
+    "parent_section": "CPA_2019_S4",
+    "label": "Sentence 2",
+    "text": "The Central Council shall meet at such time and place as the Chairperson may think fit and shall observe such procedure in regard to the transaction of its business as may be prescribed.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S6_sent_1",
+    "parent_section": "CPA_2019_S6",
+    "label": "Sentence 1",
+    "text": "Every State Government shall, by notification, establish with effect from such date as it may specify in such notification, a State Consumer Protection Council for such State to be known as the State Council.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S6_sent_2",
+    "parent_section": "CPA_2019_S6",
+    "label": "Sentence 2",
+    "text": "The State Council shall be an advisory council and consist of the Minister-in-charge of Consumer Affairs in the State Government who shall be the Chairperson, such number of other official or non-official members representing such interests as may be prescribed, and such number of other official or non-official members, not exceeding ten, as may be nominated by the Central Government.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S6_sent_3",
+    "parent_section": "CPA_2019_S6",
+    "label": "Sentence 3",
+    "text": "The State Council shall meet as and when necessary but not less than two meetings shall be held every year.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S6_sent_4",
+    "parent_section": "CPA_2019_S6",
+    "label": "Sentence 4",
+    "text": "The State Council shall meet at such time and place as the Chairperson may think fit and shall observe such procedure in regard to the transaction of its business as may be prescribed.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S8_sent_1",
+    "parent_section": "CPA_2019_S8",
+    "label": "Sentence 1",
+    "text": "The State Government shall, by notification, establish for every district with effect from such date as it may specify in such notification, a District Consumer Protection Council to be known as the District Council.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S8_sent_2",
+    "parent_section": "CPA_2019_S8",
+    "label": "Sentence 2",
+    "text": "The District Council shall be an advisory council and consist of the Collector of the district, by whatever name called, who shall be the Chairperson, and such number of other official and non-official members representing such interests as may be prescribed.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S8_sent_3",
+    "parent_section": "CPA_2019_S8",
+    "label": "Sentence 3",
+    "text": "The District Council shall meet as and when necessary but not less than two meetings shall be held every year.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S8_sent_4",
+    "parent_section": "CPA_2019_S8",
+    "label": "Sentence 4",
+    "text": "The District Council shall meet at such time and place within the district as the Chairperson may think fit and shall observe such procedure in regard to the transaction of its business as may be prescribed.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S10_sent_1",
+    "parent_section": "CPA_2019_S10",
+    "label": "Sentence 1",
+    "text": "The Central Government shall, by notification, establish with effect from such date as it may specify in that notification, a Central Consumer Protection Authority to be known as the Central Authority to regulate matters relating to violation of rights of consumers, unfair trade practices and false or misleading advertisements which are prejudicial to the interests of public and consumers and to promote, protect and enforce the rights of consumers as a class.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S10_sent_2",
+    "parent_section": "CPA_2019_S10",
+    "label": "Sentence 2",
+    "text": "The Central Authority shall consist of a Chief Commissioner and such number of other Commissioners as may be prescribed, to be appointed by the Central Government to exercise the powers and discharge the functions under this Act.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S10_sent_3",
+    "parent_section": "CPA_2019_S10",
+    "label": "Sentence 3",
+    "text": "The headquarters of the Central Authority shall be at such place in the National Capital Region of Delhi, and it shall have regional and other offices in any other place in India as the Central Government may decide.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S13_sent_1",
+    "parent_section": "CPA_2019_S13",
+    "label": "Sentence 1",
+    "text": "The Central Government shall provide the Central Authority such number of officers and other employees as it considers necessary for the efficient performance of its functions under this Act.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S13_sent_2",
+    "parent_section": "CPA_2019_S13",
+    "label": "Sentence 2",
+    "text": "The salaries and allowances payable to, and the other terms and conditions of service of, the officers and other employees of the Central Authority appointed under this Act shall be such as may be prescribed.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S13_sent_3",
+    "parent_section": "CPA_2019_S13",
+    "label": "Sentence 3",
+    "text": "The Central Authority may engage, in accordance with the procedure specified by regulations, such number of experts and professionals of integrity and ability, who have special knowledge and experience in the areas of consumer rights and welfare, consumer policy, law, medicine, food safety, health, engineering, product safety, commerce, economics, public affairs or administration, as it deems necessary to assist it in the discharge of its functions under this Act.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S14_sent_1",
+    "parent_section": "CPA_2019_S14",
+    "label": "Sentence 1",
+    "text": "The Central Authority shall regulate the procedure for transaction of its business and allocation of its business amongst the Chief Commissioner and Commissioners as may be specified by regulations.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S14_sent_2",
+    "parent_section": "CPA_2019_S14",
+    "label": "Sentence 2",
+    "text": "The Chief Commissioner shall have the powers of general superintendence, direction and control in respect of all administrative matters of the Central Authority and may delegate such of his powers relating to administrative matters of the Central Authority, as he may think fit, to any Commissioner, including a Commissioner of a regional office, or any other officer of the Central Authority.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S15_sent_1",
+    "parent_section": "CPA_2019_S15",
+    "label": "Sentence 1",
+    "text": "The Central Authority shall have an Investigation Wing headed by a Director-General for the purpose of conducting inquiry or investigation under this Act as may be directed by the Central Authority.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S15_sent_2",
+    "parent_section": "CPA_2019_S15",
+    "label": "Sentence 2",
+    "text": "The Central Government may appoint a Director-General and such number of Additional Director-General, Director, Joint Director, Deputy Director and Assistant Director, from amongst persons who have experience in investigation and possess such qualifications, in such manner, as may be prescribed.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S15_sent_3",
+    "parent_section": "CPA_2019_S15",
+    "label": "Sentence 3",
+    "text": "Every Additional Director-General, Director, Joint Director, Deputy Director and Assistant Director shall exercise his powers and discharge his functions subject to the general control, supervision and direction of the Director-General.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S15_sent_4",
+    "parent_section": "CPA_2019_S15",
+    "label": "Sentence 4",
+    "text": "The Director-General may delegate all or any of his powers to the Additional Director-General or Director, Joint Director, Deputy Director or Assistant Director, as the case may be, while conducting inquiries or investigations under this Act.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S15_sent_5",
+    "parent_section": "CPA_2019_S15",
+    "label": "Sentence 5",
+    "text": "The inquiries or investigations made by the Director-General shall be submitted to the Central Authority in such form, in such manner and within such time, as may be specified by regulations.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S18_sent_1",
+    "parent_section": "CPA_2019_S18",
+    "label": "Sentence 1",
+    "text": "The Central Authority shall protect, promote and enforce the rights of consumers as a class and prevent violation of consumers rights under this Act, prevent unfair trade practices and ensure that no person engages himself in unfair trade practices, ensure that no false or misleading advertisement is made of any goods or services which contravenes the provisions of this Act or the rules or regulations made thereunder, and ensure that no person takes part in the publication of any advertisement which is false or misleading.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S18_sent_2",
+    "parent_section": "CPA_2019_S18",
+    "label": "Sentence 2",
+    "text": "Without prejudice to the generality of these provisions, the Central Authority may inquire or cause an inquiry or investigation to be made into violations of consumer rights or unfair trade practices either suo motu or on a complaint received or on the directions from the Central Government, file complaints before the District Commission, the State Commission or the National Commission, intervene in any proceedings before the District Commission, the State Commission or the National Commission in respect of any allegation of violation of consumer rights or unfair trade practices, review matters relating to and factors inhibiting enjoyment of consumer rights and recommend appropriate remedial measures, recommend adoption of international covenants and best international practices on consumer rights, undertake and promote research in the field of consumer rights, spread and promote awareness on consumer rights, encourage non-Governmental organisations and other institutions working in the field of consumer rights to cooperate with consumer protection agencies, mandate the use of unique and universal goods identifiers to prevent unfair trade practices and protect consumers interest, issue safety notices to alert consumers against dangerous or unsafe goods or services, advise Ministries and Departments of the Central and State Governments on consumer welfare measures, and issue necessary guidelines to prevent unfair trade practices and protect consumers interest.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S19_sent_1",
+    "parent_section": "CPA_2019_S19",
+    "label": "Sentence 1",
+    "text": "The Central Authority may, after receiving any information, complaint or directions from the Central Government or of its own motion, conduct or cause to be conducted a preliminary inquiry to determine whether there exists a prima facie case of violation of consumer rights, unfair trade practice or false or misleading advertisement by any person which is prejudicial to public interest or to the interests of consumers and, if satisfied that such a prima facie case exists, shall cause an investigation to be made by the Director-General or by the District Collector.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S19_sent_2",
+    "parent_section": "CPA_2019_S19",
+    "label": "Sentence 2",
+    "text": "Where after preliminary inquiry the Central Authority is of the opinion that the matter is to be dealt with by a Regulator established under any other law for the time being in force, it may refer such matter to the concerned Regulator along with its report.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S19_sent_3",
+    "parent_section": "CPA_2019_S19",
+    "label": "Sentence 3",
+    "text": "For the purposes of investigation, the Central Authority, the Director-General or the District Collector may call upon any person and direct such person to produce any document or record in his possession.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S20_proviso_0",
+    "parent_section": "CPA_2019_S20",
+    "label": "provided that",
+    "text": "the Central Authority shall give the person an opportunity of being heard before passing any such order.",
+    "clause_type": "proviso"
+  },
+  {
+    "clause_id": "CPA_2019_S21_sent_1",
+    "parent_section": "CPA_2019_S21",
+    "label": "Sentence 1",
+    "text": "Where the Central Authority is satisfied after investigation that any advertisement is false or misleading and prejudicial to the interests of consumers or contravenes consumer rights, it may issue directions to the concerned trader, manufacturer, endorser, advertiser or publisher to discontinue or modify such advertisement.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S21_sent_2",
+    "parent_section": "CPA_2019_S21",
+    "label": "Sentence 2",
+    "text": "The Central Authority may impose a penalty on a manufacturer or endorser which may extend to ten lakh rupees and, for every subsequent contravention, up to fifty lakh rupees.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S21_sent_3",
+    "parent_section": "CPA_2019_S21",
+    "label": "Sentence 3",
+    "text": "The Central Authority may prohibit an endorser of a false or misleading advertisement from making any endorsement for a period up to one year and, for subsequent contraventions, up to three years.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S21_sent_4",
+    "parent_section": "CPA_2019_S21",
+    "label": "Sentence 4",
+    "text": "A penalty up to ten lakh rupees may be imposed on any person who publishes or is party to the publication of a misleading advertisement.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S21_sent_5",
+    "parent_section": "CPA_2019_S21",
+    "label": "Sentence 5",
+    "text": "An endorser shall not be liable to penalty if due diligence was exercised to verify the veracity of the claims made in the advertisement.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S21_sent_6",
+    "parent_section": "CPA_2019_S21",
+    "label": "Sentence 6",
+    "text": "A publisher shall not be liable if the advertisement was published in the ordinary course of business without prior knowledge of an order for withdrawal or modification.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S21_sent_7",
+    "parent_section": "CPA_2019_S21",
+    "label": "Sentence 7",
+    "text": "While determining penalties, the Central Authority shall have regard to the population and area affected, frequency and duration of the offence, vulnerability of affected persons and gross revenue generated.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S21_sent_8",
+    "parent_section": "CPA_2019_S21",
+    "label": "Sentence 8",
+    "text": "The Central Authority shall give the person an opportunity of being heard before passing any order under this section.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S26_sent_1",
+    "parent_section": "CPA_2019_S26",
+    "label": "Sentence 1",
+    "text": "The Central Authority shall maintain proper accounts and relevant records and prepare an annual statement of accounts in such form and manner as may be prescribed in consultation with the Comptroller and Auditor-General of India.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S26_sent_2",
+    "parent_section": "CPA_2019_S26",
+    "label": "Sentence 2",
+    "text": "The accounts of the Central Authority shall be audited by the Comptroller and Auditor-General of India at such intervals as may be specified and the expenditure incurred in connection with such audit shall be payable by the Central Authority.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S26_sent_3",
+    "parent_section": "CPA_2019_S26",
+    "label": "Sentence 3",
+    "text": "The Comptroller and Auditor-General of India or any person appointed by him shall have the same rights, privileges and authority as in the audit of Government accounts, including the right to demand production of books, accounts, vouchers and documents and to inspect offices of the Central Authority.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S26_sent_4",
+    "parent_section": "CPA_2019_S26",
+    "label": "Sentence 4",
+    "text": "The accounts as certified together with the audit report shall be forwarded annually to the Central Government and laid before each House of Parliament.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S27_sent_1",
+    "parent_section": "CPA_2019_S27",
+    "label": "Sentence 1",
+    "text": "The Central Authority shall prepare once in every year, in such form, manner and at such time as may be prescribed, an annual report giving full account of its activities during the previous year and such other reports and returns, as may be directed, and copies of such report and returns shall be forwarded to the Central Government.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S27_sent_2",
+    "parent_section": "CPA_2019_S27",
+    "label": "Sentence 2",
+    "text": "A copy of the annual report received under sub-section (1) shall be laid, as soon as may be after it is received, before each House of Parliament.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S28_main_main_1",
+    "parent_section": "CPA_2019_S28",
+    "label": "Main Clause",
+    "text": "The State Government shall, by notification, establish a District Consumer Disputes Redressal Commission, to be known as the District Commission, in each district of the State",
+    "clause_type": "main_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S28_dep_dep_1",
+    "parent_section": "CPA_2019_S28",
+    "label": "Dependent Clause",
+    "text": "Provided that the State Government may, if it deems fit, establish more than one District Commission in a district",
+    "clause_type": "dependent_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S28_item_1",
+    "parent_section": "CPA_2019_S28",
+    "label": "List Item",
+    "text": "Each District Commission shall consist of a President",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S28_final_2",
+    "parent_section": "CPA_2019_S28",
+    "label": "Final Item",
+    "text": "not less than two and not more than such number of members as may be prescribed, in consultation with the Central Government",
+    "clause_type": "final_item"
+  },
+  {
+    "clause_id": "CPA_2019_S32_item_1",
+    "parent_section": "CPA_2019_S32",
+    "label": "List Item",
+    "text": "If, at any time, there is a vacancy in the office of the President or member of a District Commission, the State Government may, by notification, direct any other District Commission specified in that notification to exercise the jurisdiction in respect of that district also",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S33_sent_1",
+    "parent_section": "CPA_2019_S33",
+    "label": "Sentence 1",
+    "text": "The State Government shall provide the District Commission with such officers and other employees as may be required to assist the District Commission in the discharge of its functions.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S33_sent_2",
+    "parent_section": "CPA_2019_S33",
+    "label": "Sentence 2",
+    "text": "The officers and other employees of the District Commission shall discharge their functions under the general superintendence of the President of the District Commission.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S33_sent_3",
+    "parent_section": "CPA_2019_S33",
+    "label": "Sentence 3",
+    "text": "The salaries and allowances payable to, and the other terms and conditions of service of, the officers and other employees of the District Commission shall be such as may be prescribed.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S34_main_main_1",
+    "parent_section": "CPA_2019_S34",
+    "label": "Main Clause",
+    "text": "Subject to the other provisions of this Act, the District Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration does not exceed one crore rupees",
+    "clause_type": "main_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S34_dep_dep_1",
+    "parent_section": "CPA_2019_S34",
+    "label": "Dependent Clause",
+    "text": "Provided that where the Central Government deems it necessary so to do, it may prescribe such other value, as it deems fit",
+    "clause_type": "dependent_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S34_item_1",
+    "parent_section": "CPA_2019_S34",
+    "label": "List Item",
+    "text": "A complaint shall be instituted in a District Commission within the local limits of whose jurisdiction, the opposite party or each of the opposite parties resides or carries on business or has a branch office or personally works for gain",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S34_item_2",
+    "parent_section": "CPA_2019_S34",
+    "label": "List Item",
+    "text": "or the cause of action, wholly or in part, arises",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S35_item_1",
+    "parent_section": "CPA_2019_S35",
+    "label": "List Item",
+    "text": "A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or agreed to be provided, may be filed with a District Commission by the consumer",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S35_item_2",
+    "parent_section": "CPA_2019_S35",
+    "label": "List Item",
+    "text": "any recognised consumer association",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S35_item_3",
+    "parent_section": "CPA_2019_S35",
+    "label": "List Item",
+    "text": "one or more consumers, where there are numerous consumers having the same interest",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S36_main_main_1",
+    "parent_section": "CPA_2019_S36",
+    "label": "Main Clause",
+    "text": "On receipt of a complaint made under section 35, the District Commission may, by order, admit the complaint for being proceeded with or reject the same",
+    "clause_type": "main_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S36_dep_dep_1",
+    "parent_section": "CPA_2019_S36",
+    "label": "Dependent Clause",
+    "text": "Provided that a complaint shall not be rejected under this section unless an opportunity of being heard has been given to the complainant",
+    "clause_type": "dependent_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S38_sent_1",
+    "parent_section": "CPA_2019_S38",
+    "label": "Sentence 1",
+    "text": "The District Commission shall, on admission of a complaint, or in respect of cases referred for mediation on failure of settlement by mediation, proceed with such complaint.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S38_sent_2",
+    "parent_section": "CPA_2019_S38",
+    "label": "Sentence 2",
+    "text": "Every complaint shall be heard by the District Commission on the basis of affidavit and documentary evidence placed on record.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S38_sent_3",
+    "parent_section": "CPA_2019_S38",
+    "label": "Sentence 3",
+    "text": "Every complaint shall be disposed of as expeditiously as possible and endeavour shall be made to decide the complaint within a period of three months from the date of receipt of notice by opposite party where the complaint does not require analysis or testing of commodities and within five months if it requires analysis or testing of commodities.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S41_main_main_1",
+    "parent_section": "CPA_2019_S41",
+    "label": "Main Clause",
+    "text": "Any person aggrieved by an order made by the District Commission may prefer an appeal against such order to the State Commission on the grounds of facts or law within a period of forty-five days from the date of the order, in such form and manner, as may be prescribed",
+    "clause_type": "main_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S41_dep_dep_1",
+    "parent_section": "CPA_2019_S41",
+    "label": "Dependent Clause",
+    "text": "Provided that no appeal by a person, who is required to pay any amount in terms of an order of the District Commission, shall be entertained by the State Commission unless the appellant has deposited fifty per cent of that amount",
+    "clause_type": "dependent_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S42_item_1",
+    "parent_section": "CPA_2019_S42",
+    "label": "List Item",
+    "text": "Each State Commission shall consist of a President",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S42_final_2",
+    "parent_section": "CPA_2019_S42",
+    "label": "Final Item",
+    "text": "not less than four or not more than such number of members as may be prescribed in consultation with the Central Government",
+    "clause_type": "final_item"
+  },
+  {
+    "clause_id": "CPA_2019_S46_sent_1",
+    "parent_section": "CPA_2019_S46",
+    "label": "Sentence 1",
+    "text": "The State Government shall determine the nature and categories of the officers and other employees required to assist the State Commission in the discharge of its functions and provide the Commission with such officers and other employees as it may think fit.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S46_sent_2",
+    "parent_section": "CPA_2019_S46",
+    "label": "Sentence 2",
+    "text": "The officers and other employees of the State Commission shall discharge their functions under the general superintendence of the President.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S47_item_1",
+    "parent_section": "CPA_2019_S47",
+    "label": "List Item",
+    "text": "Subject to the other provisions of this Act, the State Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration, exceeds rupees one crore, but does not exceed rupees ten crore",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S47_item_2",
+    "parent_section": "CPA_2019_S47",
+    "label": "List Item",
+    "text": "complaints against unfair contracts, where the value of goods or services paid as consideration does not exceed ten crore rupees",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S47_final_3",
+    "parent_section": "CPA_2019_S47",
+    "label": "Final Item",
+    "text": "appeals against the orders of any District Commission within the State",
+    "clause_type": "final_item"
+  },
+  {
+    "clause_id": "CPA_2019_S49_sub_1",
+    "parent_section": "CPA_2019_S49",
+    "label": "sub-section (1)",
+    "text": ", the State Commission may also declare any terms of contract, which is unfair to any consumer, to be null and void.",
+    "clause_type": "subsection"
+  },
+  {
+    "clause_id": "CPA_2019_S51_sent_1",
+    "parent_section": "CPA_2019_S51",
+    "label": "Sentence 1",
+    "text": "Any person aggrieved by an order made by the State Commission in exercise of its powers conferred by sub-clause (i) or (ii) of clause (a) of sub-section (1) of section 47 may prefer an appeal against such order to the National Commission within a period of thirty days from the date of the order.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S51_sent_2",
+    "parent_section": "CPA_2019_S51",
+    "label": "Sentence 2",
+    "text": "No appeal by a person, who is required to pay any amount in terms of an order of the State Commission, shall be entertained by the National Commission unless the appellant has deposited fifty per cent of that amount.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S53_sent_1",
+    "parent_section": "CPA_2019_S53",
+    "label": "Sentence 1",
+    "text": "The Central Government shall, by notification, establish a National Consumer Disputes Redressal Commission, to be known as the National Commission.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S53_sent_2",
+    "parent_section": "CPA_2019_S53",
+    "label": "Sentence 2",
+    "text": "The National Commission shall ordinarily function at the National Capital Region and perform its functions at such other places as the Central Government may in consultation with the National Commission notify.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S54_item_1",
+    "parent_section": "CPA_2019_S54",
+    "label": "List Item",
+    "text": "The National Commission shall consist of a President",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S54_final_2",
+    "parent_section": "CPA_2019_S54",
+    "label": "Final Item",
+    "text": "not less than four and not more than such number of members as may be prescribed",
+    "clause_type": "final_item"
+  },
+  {
+    "clause_id": "CPA_2019_S55_main_main_1",
+    "parent_section": "CPA_2019_S55",
+    "label": "Main Clause",
+    "text": "The Central Government may, by notification, make rules to provide for qualifications, appointment, term of office, salaries and allowances, resignation, removal and other terms and conditions of service of the President and members of the National Commission",
+    "clause_type": "main_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S55_dep_dep_1",
+    "parent_section": "CPA_2019_S55",
+    "label": "Dependent Clause",
+    "text": "Provided that the President shall not hold office after attaining seventy years and members sixty-seven years",
+    "clause_type": "dependent_clause"
+  },
+  {
+    "clause_id": "CPA_2019_S57_sent_1",
+    "parent_section": "CPA_2019_S57",
+    "label": "Sentence 1",
+    "text": "The Central Government shall provide, in consultation with the President of the National Commission, such number of officers and other employees to assist the National Commission in the discharge of its functions as it may think fit.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S57_sent_2",
+    "parent_section": "CPA_2019_S57",
+    "label": "Sentence 2",
+    "text": "The officers and other employees of the National Commission shall discharge their functions under the general superintendence of the President.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S58_item_1",
+    "parent_section": "CPA_2019_S58",
+    "label": "List Item",
+    "text": "Subject to the other provisions of this Act, the National Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration exceeds rupees ten crore",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S58_item_2",
+    "parent_section": "CPA_2019_S58",
+    "label": "List Item",
+    "text": "complaints against unfair contracts, where the value of goods or services paid as consideration exceeds ten crore rupees",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S58_item_3",
+    "parent_section": "CPA_2019_S58",
+    "label": "List Item",
+    "text": "appeals against the orders of any State Commission",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S58_final_4",
+    "parent_section": "CPA_2019_S58",
+    "label": "Final Item",
+    "text": "appeals against the orders of the Central Authority",
+    "clause_type": "final_item"
+  },
+  {
+    "clause_id": "CPA_2019_S59_sent_1",
+    "parent_section": "CPA_2019_S59",
+    "label": "Sentence 1",
+    "text": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be considered necessary, be applicable to the disposal of complaints by the National Commission.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S59_sent_2",
+    "parent_section": "CPA_2019_S59",
+    "label": "Sentence 2",
+    "text": "The National Commission may also declare any terms of contract, which is unfair to any consumer to be null and void.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S67_sent_1",
+    "parent_section": "CPA_2019_S67",
+    "label": "Sentence 1",
+    "text": "Any person, aggrieved by an order made by the National Commission in exercise of its powers conferred by sub-clause (i) or (ii) of clause (a) of sub-section (1) of section 58, may prefer an appeal against such order to the Supreme Court within a period of thirty days from the date of the order.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S67_sent_2",
+    "parent_section": "CPA_2019_S67",
+    "label": "Sentence 2",
+    "text": "No appeal shall be entertained unless the person has deposited fifty per cent of the ordered amount.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S69_sent_1",
+    "parent_section": "CPA_2019_S69",
+    "label": "Sentence 1",
+    "text": "The District Commission, the State Commission or the National Commission shall not admit a complaint unless it is filed within two years from the date on which the cause of action has arisen.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S69_sent_2",
+    "parent_section": "CPA_2019_S69",
+    "label": "Sentence 2",
+    "text": "A complaint may be entertained after the period if the complainant satisfies the Commission that he had sufficient cause for the delay.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S70_sent_1",
+    "parent_section": "CPA_2019_S70",
+    "label": "Sentence 1",
+    "text": "The National Commission shall have administrative control over all the State Commissions in matters including monitoring performance, investigating allegations against members, and issuance of uniform procedure instructions.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S70_sent_2",
+    "parent_section": "CPA_2019_S70",
+    "label": "Sentence 2",
+    "text": "The State Commission shall have similar administrative control over all District Commissions within its jurisdiction.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S73_item_1",
+    "parent_section": "CPA_2019_S73",
+    "label": "List Item",
+    "text": "Notwithstanding anything contained in the Code of Criminal Procedure, 1973, where an order is passed under sub-section (1) of section 72, an appeal shall lie from the order of the District Commission to the State Commission",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S73_item_2",
+    "parent_section": "CPA_2019_S73",
+    "label": "List Item",
+    "text": "from the State Commission to the National Commission",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S73_final_3",
+    "parent_section": "CPA_2019_S73",
+    "label": "Final Item",
+    "text": "from the National Commission to the Supreme Court",
+    "clause_type": "final_item"
+  },
+  {
+    "clause_id": "CPA_2019_S74_sent_1",
+    "parent_section": "CPA_2019_S74",
+    "label": "Sentence 1",
+    "text": "The State Government shall establish a consumer mediation cell to be attached to each of the District Commissions and the State Commissions.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S74_sent_2",
+    "parent_section": "CPA_2019_S74",
+    "label": "Sentence 2",
+    "text": "The Central Government shall establish a consumer mediation cell to be attached to the National Commission and its regional Benches.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S74_sent_3",
+    "parent_section": "CPA_2019_S74",
+    "label": "Sentence 3",
+    "text": "These cells shall maintain lists of empanelled mediators and records of proceedings.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S75_sent_1",
+    "parent_section": "CPA_2019_S75",
+    "label": "Sentence 1",
+    "text": "For the purpose of mediation, the National Commission, State Commission or District Commission shall prepare a panel of mediators.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S75_sent_2",
+    "parent_section": "CPA_2019_S75",
+    "label": "Sentence 2",
+    "text": "The qualifications, experience, and procedure for empanelment shall be specified by regulations.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S75_sent_3",
+    "parent_section": "CPA_2019_S75",
+    "label": "Sentence 3",
+    "text": "The panel shall be valid for five years.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S79_sent_1",
+    "parent_section": "CPA_2019_S79",
+    "label": "Sentence 1",
+    "text": "Mediation shall be held in the consumer mediation cell.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S79_sent_2",
+    "parent_section": "CPA_2019_S79",
+    "label": "Sentence 2",
+    "text": "The mediator shall have regard to the rights and obligations of the parties, trade usages, and circumstances of the dispute, and be guided by principles of natural justice.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S80_sent_1",
+    "parent_section": "CPA_2019_S80",
+    "label": "Sentence 1",
+    "text": "If an agreement is reached between the parties, the terms shall be reduced to writing and signed by the parties.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S80_sent_2",
+    "parent_section": "CPA_2019_S80",
+    "label": "Sentence 2",
+    "text": "The mediator shall prepare a settlement report and forward the signed agreement to the concerned Commission.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S81_sent_1",
+    "parent_section": "CPA_2019_S81",
+    "label": "Sentence 1",
+    "text": "The Commission shall, within seven days of receipt of the settlement report, pass a suitable order recording the settlement and dispose of the matter.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S81_sent_2",
+    "parent_section": "CPA_2019_S81",
+    "label": "Sentence 2",
+    "text": "Where the dispute is settled only in part, the Commission shall record the partial settlement and continue to hear the remaining issues.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S85_item_1",
+    "parent_section": "CPA_2019_S85",
+    "label": "List Item",
+    "text": "A product service provider shall be liable in a product liability action if the service was faulty, imperfect, deficient or inadequate",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S85_item_2",
+    "parent_section": "CPA_2019_S85",
+    "label": "List Item",
+    "text": "harm was caused by negligence or withholding information",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S86_item_1",
+    "parent_section": "CPA_2019_S86",
+    "label": "List Item",
+    "text": "A product seller who is not a manufacturer shall be liable if he exercised substantial control over design/manufacture",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S86_item_2",
+    "parent_section": "CPA_2019_S86",
+    "label": "List Item",
+    "text": "modified the product causing harm",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S86_item_3",
+    "parent_section": "CPA_2019_S86",
+    "label": "List Item",
+    "text": "made an independent express warranty",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S87_sent_1",
+    "parent_section": "CPA_2019_S87",
+    "label": "Sentence 1",
+    "text": "A product liability action cannot be brought against the product seller if the product was misused, altered, or modified.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S87_sent_2",
+    "parent_section": "CPA_2019_S87",
+    "label": "Sentence 2",
+    "text": "Manufacturers are not liable for failing to warn about obvious dangers or if the consumer was under the influence of alcohol or drugs.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S89_item_1",
+    "parent_section": "CPA_2019_S89",
+    "label": "List Item",
+    "text": "Any manufacturer or service provider who causes a false or misleading advertisement to be made shall be punished with imprisonment up to two years and fine up to ten lakh rupees",
+    "clause_type": "semicolon_item"
+  },
+  {
+    "clause_id": "CPA_2019_S89_final_2",
+    "parent_section": "CPA_2019_S89",
+    "label": "Final Item",
+    "text": "for subsequent offences, imprisonment up to five years and fine up to fifty lakh rupees",
+    "clause_type": "final_item"
+  },
+  {
+    "clause_id": "CPA_2019_S99_sent_1",
+    "parent_section": "CPA_2019_S99",
+    "label": "Sentence 1",
+    "text": "The Central Authority shall be bound by such directions on questions of policy as the Central Government may give in writing.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S99_sent_2",
+    "parent_section": "CPA_2019_S99",
+    "label": "Sentence 2",
+    "text": "The decision of the Central Government whether a question is one of policy shall be final.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S105_sent_1",
+    "parent_section": "CPA_2019_S105",
+    "label": "Sentence 1",
+    "text": "Every rule and every regulation made under this Act shall be laid before each House of Parliament for a total period of thirty days.",
+    "clause_type": "sentence"
+  },
+  {
+    "clause_id": "CPA_2019_S105_sent_2",
+    "parent_section": "CPA_2019_S105",
+    "label": "Sentence 2",
+    "text": "Rules made by a State Government shall be laid before the State Legislature.",
+    "clause_type": "sentence"
+  }
+]

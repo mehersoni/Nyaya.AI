@@ -1,0 +1,233 @@
+[
+  {
+    "from": "CPA_2019_S23",
+    "to": "CPA_2019_S10",
+    "reference_type": "direct_reference",
+    "context": "ty or body to exercise the powers and perform the functions of the Central Authority referred to in section 10.",
+    "match_text": "section 10"
+  },
+  {
+    "from": "CPA_2019_S24",
+    "to": "CPA_2019_S20",
+    "reference_type": "direct_reference",
+    "context": "Any person aggrieved by an order passed by the Central Authority under sections 20 or 21 may file an appeal before the National Commission within a period of thirty days from the dat",
+    "match_text": "sections 20"
+  },
+  {
+    "from": "CPA_2019_S27",
+    "to": "CPA_2019_S1",
+    "reference_type": "general_reference",
+    "context": "nd returns shall be forwarded to the Central Government. A copy of the annual report received under sub-section (1) shall be laid, as soon as may be after it is received, before each House of Parliament.",
+    "match_text": "sub-section (1)"
+  },
+  {
+    "from": "CPA_2019_S36",
+    "to": "CPA_2019_S35",
+    "reference_type": "direct_reference",
+    "context": "t Commission and atleast one member thereof, sitting together. On receipt of a complaint made under section 35, the District Commission may, by order, admit the complaint for being proceeded with or reject the",
+    "match_text": "section 35"
+  },
+  {
+    "from": "CPA_2019_S36",
+    "to": "CPA_2019_S35",
+    "reference_type": "procedural_reference",
+    "context": "of that Commission and atleast one member thereof, sitting together. On receipt of a complaint made under section 35, the District Commission may, by order, admit the complaint for being proceeded with or reject the",
+    "match_text": "under section 35"
+  },
+  {
+    "from": "CPA_2019_S49",
+    "to": "CPA_2019_S35",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be necessary, be applicable to the disposal of complaints by",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S49",
+    "to": "CPA_2019_S36",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be necessary, be applicable to the disposal of complaints by",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S49",
+    "to": "CPA_2019_S37",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be necessary, be applicable to the disposal of complaints by",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S49",
+    "to": "CPA_2019_S38",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be necessary, be applicable to the disposal of complaints by",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S49",
+    "to": "CPA_2019_S39",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be necessary, be applicable to the disposal of complaints by",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S49",
+    "to": "CPA_2019_S1",
+    "reference_type": "general_reference",
+    "context": "cable to the disposal of complaints by the State Commission. Without prejudice to the provisions of sub-section (1), the State Commission may also declare any terms of contract, which is unfair to any consumer, to b",
+    "match_text": "sub-section (1)"
+  },
+  {
+    "from": "CPA_2019_S51",
+    "to": "CPA_2019_S47",
+    "reference_type": "direct_reference",
+    "context": "n in exercise of its powers conferred by sub-clause (i) or (ii) of clause (a) of sub-section (1) of section 47 may prefer an appeal against such order to the National Commission within a period of thirty days f",
+    "match_text": "section 47"
+  },
+  {
+    "from": "CPA_2019_S51",
+    "to": "CPA_2019_S1",
+    "reference_type": "general_reference",
+    "context": "the State Commission in exercise of its powers conferred by sub-clause (i) or (ii) of clause (a) of sub-section (1) of section 47 may prefer an appeal against such order to the National Commission within a period of",
+    "match_text": "sub-section (1)"
+  },
+  {
+    "from": "CPA_2019_S59",
+    "to": "CPA_2019_S35",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be considered necessary, be applicable to the disposal of com",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S59",
+    "to": "CPA_2019_S36",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be considered necessary, be applicable to the disposal of com",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S59",
+    "to": "CPA_2019_S37",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be considered necessary, be applicable to the disposal of com",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S59",
+    "to": "CPA_2019_S38",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be considered necessary, be applicable to the disposal of com",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S59",
+    "to": "CPA_2019_S39",
+    "reference_type": "direct_reference",
+    "context": "The provisions relating to complaints under sections 35, 36, 37, 38 and 39 shall, with such modifications as may be considered necessary, be applicable to the disposal of com",
+    "match_text": "sections 35, 36, 37, 38 and 39"
+  },
+  {
+    "from": "CPA_2019_S67",
+    "to": "CPA_2019_S58",
+    "reference_type": "direct_reference",
+    "context": "n in exercise of its powers conferred by sub-clause (i) or (ii) of clause (a) of sub-section (1) of section 58, may prefer an appeal against such order to the Supreme Court within a period of thirty days from t",
+    "match_text": "section 58"
+  },
+  {
+    "from": "CPA_2019_S67",
+    "to": "CPA_2019_S1",
+    "reference_type": "general_reference",
+    "context": "National Commission in exercise of its powers conferred by sub-clause (i) or (ii) of clause (a) of sub-section (1) of section 58, may prefer an appeal against such order to the Supreme Court within a period of thir",
+    "match_text": "sub-section (1)"
+  },
+  {
+    "from": "CPA_2019_S73",
+    "to": "CPA_2019_S72",
+    "reference_type": "direct_reference",
+    "context": "ontained in the Code of Criminal Procedure, 1973, where an order is passed under sub-section (1) of section 72, an appeal shall lie from the order of the District Commission to the State Commission; from the St",
+    "match_text": "section 72"
+  },
+  {
+    "from": "CPA_2019_S73",
+    "to": "CPA_2019_S1",
+    "reference_type": "general_reference",
+    "context": "standing anything contained in the Code of Criminal Procedure, 1973, where an order is passed under sub-section (1) of section 72, an appeal shall lie from the order of the District Commission to the State Commissio",
+    "match_text": "sub-section (1)"
+  },
+  {
+    "from": "CPA_2019_S88",
+    "to": "CPA_2019_S20",
+    "reference_type": "direct_reference",
+    "context": "Whoever, fails to comply with any direction of the Central Authority under sections 20 and 21, shall be punished with imprisonment for a term which may extend to six months or with fine which m",
+    "match_text": "sections 20 and 21"
+  },
+  {
+    "from": "CPA_2019_S88",
+    "to": "CPA_2019_S21",
+    "reference_type": "direct_reference",
+    "context": "Whoever, fails to comply with any direction of the Central Authority under sections 20 and 21, shall be punished with imprisonment for a term which may extend to six months or with fine which m",
+    "match_text": "sections 20 and 21"
+  },
+  {
+    "from": "CPA_2019_S92",
+    "to": "CPA_2019_S88",
+    "reference_type": "direct_reference",
+    "context": "No cognizance shall be taken by a competent court of any offence under sections 88 and 89 except on a complaint filed by the Central Authority or any officer authorised by it in this behalf",
+    "match_text": "sections 88 and 89"
+  },
+  {
+    "from": "CPA_2019_S92",
+    "to": "CPA_2019_S89",
+    "reference_type": "direct_reference",
+    "context": "No cognizance shall be taken by a competent court of any offence under sections 88 and 89 except on a complaint filed by the Central Authority or any officer authorised by it in this behalf",
+    "match_text": "sections 88 and 89"
+  },
+  {
+    "from": "CPA_2019_S95",
+    "to": "CPA_2019_S21",
+    "reference_type": "direct_reference",
+    "context": "f the Commissions and Central Authority shall be deemed to be public servants within the meaning of section 21 of the Indian Penal Code.",
+    "match_text": "section 21"
+  },
+  {
+    "from": "CPA_2019_S96",
+    "to": "CPA_2019_S88",
+    "reference_type": "direct_reference",
+    "context": "Offences under sections 88 and 89 may be compounded on payment of a prescribed amount, provided it is a first offence within a three-",
+    "match_text": "sections 88 and 89"
+  },
+  {
+    "from": "CPA_2019_S96",
+    "to": "CPA_2019_S89",
+    "reference_type": "direct_reference",
+    "context": "Offences under sections 88 and 89 may be compounded on payment of a prescribed amount, provided it is a first offence within a three-",
+    "match_text": "sections 88 and 89"
+  },
+  {
+    "from": "CPA_2019_S97",
+    "to": "CPA_2019_S21",
+    "reference_type": "direct_reference",
+    "context": "The penalty collected under section 21 and the amount collected under section 96 shall be credited to such fund as may be prescribed.",
+    "match_text": "section 21"
+  },
+  {
+    "from": "CPA_2019_S97",
+    "to": "CPA_2019_S96",
+    "reference_type": "direct_reference",
+    "context": "The penalty collected under section 21 and the amount collected under section 96 shall be credited to such fund as may be prescribed.",
+    "match_text": "section 96"
+  },
+  {
+    "from": "CPA_2019_S97",
+    "to": "CPA_2019_S21",
+    "reference_type": "procedural_reference",
+    "context": "The penalty collected under section 21 and the amount collected under section 96 shall be credited to such fund as may be prescribed.",
+    "match_text": "under section 21"
+  },
+  {
+    "from": "CPA_2019_S97",
+    "to": "CPA_2019_S96",
+    "reference_type": "procedural_reference",
+    "context": "The penalty collected under section 21 and the amount collected under section 96 shall be credited to such fund as may be prescribed.",
+    "match_text": "under section 96"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SectionReferences",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "from",
+      "to"
+    ],
+    "properties": {
+      "from": {
+        "type": "string",
+        "description": "Section ID that makes the reference"
+      },
+      "to": {
+        "type": "string",
+        "description": "Section ID that is referenced"
+      },
+      "reference_type": {
+        "type": "string",
+        "enum": [
+          "direct_reference",
+          "procedural_reference",
+          "definitional_reference",
+          "conditional_reference",
+          "general_reference",
+          "chapter_reference"
+        ],
+        "description": "Type of reference relationship"
+      },
+      "context": {
+        "type": "string",
+        "description": "Context text around the reference"
+      },
+      "match_text": {
+        "type": "string",
+        "description": "Exact text that matched the reference pattern"
+      }
+    },
+    "additionalProperties": false
+  }
+}

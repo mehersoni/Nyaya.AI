@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GrantsRightEdges",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "parent",
+      "child",
+      "relation"
+    ],
+    "properties": {
+      "parent": {
+        "type": "string",
+        "description": "Section ID that grants the right"
+      },
+      "child": {
+        "type": "string",
+        "description": "Right ID that is granted"
+      },
+      "relation": {
+        "type": "string",
+        "enum": [
+          "grants_right"
+        ]
+      }
+    },
+    "additionalProperties": false
+  }
+}

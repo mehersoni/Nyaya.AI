@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LegalRights",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "right_id",
+            "description",
+            "granted_by"
+        ],
+        "properties": {
+            "right_id": {
+                "type": "string",
+                "description": "Unique identifier for the right"
+            },
+            "description": {
+                "type": "string",
+                "description": "Description of the consumer right"
+            },
+            "granted_by": {
+                "type": "string",
+                "description": "Section ID that grants this right"
+            },
+            "right_type": {
+                "type": "string",
+                "description": "Type of right (e.g., consumer_right, procedural_right, remedy_right)"
+            },
+            "beneficiary": {
+                "type": "string",
+                "description": "Who benefits from this right (e.g., consumer, complainant)"
+            },
+            "scope": {
+                "type": "string",
+                "description": "Scope or context of the right"
+            },
+            "enforcement_mechanism": {
+                "type": "string",
+                "description": "How this right can be enforced"
+            },
+            "related_sections": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "description": "Other sections that relate to this right"
+            }
+        },
+        "additionalProperties": false
+    }
+}

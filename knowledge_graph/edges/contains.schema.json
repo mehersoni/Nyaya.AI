@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ContainsEdges",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "parent",
+            "child"
+        ],
+        "properties": {
+            "parent": {
+                "type": "string"
+            },
+            "child": {
+                "type": "string"
+            }
+        },
+        "additionalProperties": false
+    }
+}

@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8" x-data="demoApp()">
+        <!-- Header -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800">Nyayamrit Live Demo</h1>
+                    <p class="text-gray-600 mt-2">Interactive GraphRAG-based Legal Assistant</p>
+                </div>
+                <a href="/" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Dashboard
+                </a>
+            </div>
+        </div>
+
+        <!-- Audience Selection -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-xl font-bold mb-4">Select Your Role</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <button @click="setAudience('citizen')" 
+                        :class="audience === 'citizen' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'"
+                        class="p-4 rounded-lg transition-colors">
+                    <i class="fas fa-user text-2xl mb-2"></i>
+                    <div class="font-semibold">Citizen</div>
+                    <div class="text-sm">Simple explanations of rights</div>
+                </button>
+                
+                <button @click="setAudience('lawyer')" 
+                        :class="audience === 'lawyer' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'"
+                        class="p-4 rounded-lg transition-colors">
+                    <i class="fas fa-balance-scale text-2xl mb-2"></i>
+                    <div class="font-semibold">Lawyer</div>
+                    <div class="text-sm">Detailed legal analysis</div>
+                </button>
+                
+                <button @click="setAudience('judge')" 
+                        :class="audience === 'judge' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'"
+                        class="p-4 rounded-lg transition-colors">
+                    <i class="fas fa-gavel text-2xl mb-2"></i>
+                    <div class="font-semibold">Judge</div>
+                    <div class="text-sm">Comprehensive legal reasoning</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Example Questions -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-xl font-bold mb-4">Example Questions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <template x-for="example in examples[audience]" :key="example">
+                    <button @click="query = example" 
+                            class="text-left p-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
+                        <i class="fas fa-question-circle text-blue-500 mr-2"></i>
+                        <span x-text="example"></span>
+                    </button>
+                </template>
+            </div>
+        </div>
+
+        <!-- Query Interface -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-xl font-bold mb-4">Ask Your Question</h2>
+            <div class="flex space-x-4">
+                <input type="text" 
+                       x-model="query" 
+                       @keyup.enter="submitQuery()"
+                       placeholder="Enter your legal question..."
+                       class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button @click="submitQuery()" 
+                        :disabled="loading || !query.trim()"
+                        class="bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white px-6 py-3 rounded-lg transition-colors">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    <span x-text="loading ? 'Processing...' : 'Ask'"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Response Display -->
+        <div x-show="response" class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-xl font-bold mb-4">Response</h2>
+            
+            <!-- Response Content -->
+            <div class="prose max-w-none mb-4">
+                <div x-html="response?.response || ''"></div>
+            </div>
+            
+            <!-- Citations -->
+            <div x-show="response?.citations?.length > 0" class="mb-4">
+                <h3 class="font-semibold mb-2">Legal Citations:</h3>
+                <div class="space-y-2">
+                    <template x-for="citation in response?.citations || []" :key="citation.section_id">
+                        <div class="bg-blue-50 p-3 rounded border-l-4 border-blue-500">
+                            <div class="font-medium" x-text="citation.title"></div>
+                            <div class="text-sm text-gray-600" x-text="`${citation.act} - Section ${citation.section_number}`"></div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            
+            <!-- Metadata -->
+            <div class="flex items-center justify-between text-sm text-gray-600 border-t pt-4">
+                <div class="flex items-center space-x-4">
+                    <span>Confidence: <span class="font-medium" x-text="((response?.confidence_score || 0) * 100).toFixed(1) + '%'"></span></span>
+                    <span>Processing Time: <span class="font-medium" x-text="(response?.processing_time || 0).toFixed(3) + 's'"></span></span>
+                </div>
+                <div x-show="response?.requires_review" class="text-yellow-600">
+                    <i class="fas fa-exclamation-triangle mr-1"></i>
+                    Requires Expert Review
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Display -->
+        <div x-show="error" class="bg-red-50 border border-red-200 rounded-lg p-4 mb-8">
+            <div class="flex items-center">
+                <i class="fas fa-exclamation-circle text-red-500 mr-2"></i>
+                <span class="text-red-700" x-text="error"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function demoApp() {
+            return {
+                audience: 'citizen',
+                query: '',
+                response: null,
+                error: null,
+                loading: false,
+                examples: {
+                    citizen: [
+                        "What is a consumer according to CPA 2019?",
+                        "What are my rights as a consumer?",
+                        "How can I file a complaint against unfair trade practices?",
+                        "What compensation can I claim for defective products?",
+                        "Where can I seek redressal for consumer disputes?"
+                    ],
+                    lawyer: [
+                        "Show me Section 2 of Consumer Protection Act 2019",
+                        "What does Section 18 say about consumer rights?",
+                        "Find all sections related to unfair trade practices",
+                        "What are the penalties under Section 21?",
+                        "Explain the complaint procedure under CPA 2019"
+                    ],
+                    judge: [
+                        "Analyze the relationship between Sections 2 and 18",
+                        "What are the key provisions for consumer protection?",
+                        "Compare complaint procedures across different sections",
+                        "Identify all rights granted to consumers under the Act",
+                        "What are the enforcement mechanisms in CPA 2019?"
+                    ]
+                },
+                
+                setAudience(newAudience) {
+                    this.audience = newAudience;
+                    this.response = null;
+                    this.error = null;
+                },
+                
+                async submitQuery() {
+                    if (!this.query.trim()) return;
+                    
+                    this.loading = true;
+                    this.error = null;
+                    this.response = null;
+                    
+                    try {
+                        const response = await fetch('/demo/query', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                query: this.query,
+                                audience: this.audience
+                            })
+                        });
+                        
+                        if (response.ok) {
+                            this.response = await response.json();
+                        } else {
+                            const errorData = await response.json();
+                            this.error = errorData.detail || 'Query failed';
+                        }
+                    } catch (error) {
+                        this.error = 'Network error: ' + error.message;
+                    } finally {
+                        this.loading = false;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+    

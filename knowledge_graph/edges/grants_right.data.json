@@ -1,0 +1,177 @@
+[
+  {
+    "parent": "CPA_2019_S2",
+    "child": "CPA_2019_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S2",
+    "child": "CPA_2019_R_002",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S2",
+    "child": "CPA_2019_R_003",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S2",
+    "child": "CPA_2019_R_004",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S2",
+    "child": "CPA_2019_R_005",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S2",
+    "child": "CPA_2019_R_006",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S16",
+    "child": "CPA_2019_S16_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S18",
+    "child": "CPA_2019_S18_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S19",
+    "child": "CPA_2019_S19_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S20",
+    "child": "CPA_2019_S20_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S21",
+    "child": "CPA_2019_S21_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S35",
+    "child": "CPA_2019_S35_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S36",
+    "child": "CPA_2019_S36_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S36",
+    "child": "CPA_2019_S36_R_002",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S37",
+    "child": "CPA_2019_S37_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S38",
+    "child": "CPA_2019_S38_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S38",
+    "child": "CPA_2019_S38_R_002",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S39",
+    "child": "CPA_2019_S39_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S39",
+    "child": "CPA_2019_S39_R_002",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S41",
+    "child": "CPA_2019_S41_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S51",
+    "child": "CPA_2019_S51_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S67",
+    "child": "CPA_2019_S67_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S68",
+    "child": "CPA_2019_S68_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S69",
+    "child": "CPA_2019_S69_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S74",
+    "child": "CPA_2019_S74_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S75",
+    "child": "CPA_2019_S75_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S79",
+    "child": "CPA_2019_S79_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S82",
+    "child": "CPA_2019_S82_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S82",
+    "child": "CPA_2019_S82_R_002",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S83",
+    "child": "CPA_2019_S83_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S84",
+    "child": "CPA_2019_S84_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S85",
+    "child": "CPA_2019_S85_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S87",
+    "child": "CPA_2019_S87_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S92",
+    "child": "CPA_2019_S92_R_001",
+    "relation": "grants_right"
+  },
+  {
+    "parent": "CPA_2019_S103",
+    "child": "CPA_2019_S103_R_001",
+    "relation": "grants_right"
+  }
+]

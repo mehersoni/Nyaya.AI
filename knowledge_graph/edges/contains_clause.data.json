@@ -1,0 +1,637 @@
+[
+  {
+    "parent": "CPA_2019_S1",
+    "child": "CPA_2019_S1_list_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S2",
+    "child": "CPA_2019_S2_list_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S3",
+    "child": "CPA_2019_S3_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S3",
+    "child": "CPA_2019_S3_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S4",
+    "child": "CPA_2019_S4_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S4",
+    "child": "CPA_2019_S4_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S6",
+    "child": "CPA_2019_S6_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S6",
+    "child": "CPA_2019_S6_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S6",
+    "child": "CPA_2019_S6_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S6",
+    "child": "CPA_2019_S6_sent_4",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S8",
+    "child": "CPA_2019_S8_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S8",
+    "child": "CPA_2019_S8_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S8",
+    "child": "CPA_2019_S8_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S8",
+    "child": "CPA_2019_S8_sent_4",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S10",
+    "child": "CPA_2019_S10_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S10",
+    "child": "CPA_2019_S10_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S10",
+    "child": "CPA_2019_S10_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S13",
+    "child": "CPA_2019_S13_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S13",
+    "child": "CPA_2019_S13_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S13",
+    "child": "CPA_2019_S13_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S14",
+    "child": "CPA_2019_S14_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S14",
+    "child": "CPA_2019_S14_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S15",
+    "child": "CPA_2019_S15_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S15",
+    "child": "CPA_2019_S15_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S15",
+    "child": "CPA_2019_S15_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S15",
+    "child": "CPA_2019_S15_sent_4",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S15",
+    "child": "CPA_2019_S15_sent_5",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S18",
+    "child": "CPA_2019_S18_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S18",
+    "child": "CPA_2019_S18_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S19",
+    "child": "CPA_2019_S19_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S19",
+    "child": "CPA_2019_S19_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S19",
+    "child": "CPA_2019_S19_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S20",
+    "child": "CPA_2019_S20_proviso_0",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S21",
+    "child": "CPA_2019_S21_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S21",
+    "child": "CPA_2019_S21_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S21",
+    "child": "CPA_2019_S21_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S21",
+    "child": "CPA_2019_S21_sent_4",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S21",
+    "child": "CPA_2019_S21_sent_5",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S21",
+    "child": "CPA_2019_S21_sent_6",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S21",
+    "child": "CPA_2019_S21_sent_7",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S21",
+    "child": "CPA_2019_S21_sent_8",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S26",
+    "child": "CPA_2019_S26_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S26",
+    "child": "CPA_2019_S26_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S26",
+    "child": "CPA_2019_S26_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S26",
+    "child": "CPA_2019_S26_sent_4",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S27",
+    "child": "CPA_2019_S27_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S27",
+    "child": "CPA_2019_S27_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S28",
+    "child": "CPA_2019_S28_main_main_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S28",
+    "child": "CPA_2019_S28_dep_dep_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S28",
+    "child": "CPA_2019_S28_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S28",
+    "child": "CPA_2019_S28_final_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S32",
+    "child": "CPA_2019_S32_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S33",
+    "child": "CPA_2019_S33_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S33",
+    "child": "CPA_2019_S33_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S33",
+    "child": "CPA_2019_S33_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S34",
+    "child": "CPA_2019_S34_main_main_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S34",
+    "child": "CPA_2019_S34_dep_dep_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S34",
+    "child": "CPA_2019_S34_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S34",
+    "child": "CPA_2019_S34_item_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S35",
+    "child": "CPA_2019_S35_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S35",
+    "child": "CPA_2019_S35_item_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S35",
+    "child": "CPA_2019_S35_item_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S36",
+    "child": "CPA_2019_S36_main_main_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S36",
+    "child": "CPA_2019_S36_dep_dep_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S38",
+    "child": "CPA_2019_S38_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S38",
+    "child": "CPA_2019_S38_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S38",
+    "child": "CPA_2019_S38_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S41",
+    "child": "CPA_2019_S41_main_main_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S41",
+    "child": "CPA_2019_S41_dep_dep_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S42",
+    "child": "CPA_2019_S42_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S42",
+    "child": "CPA_2019_S42_final_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S46",
+    "child": "CPA_2019_S46_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S46",
+    "child": "CPA_2019_S46_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S47",
+    "child": "CPA_2019_S47_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S47",
+    "child": "CPA_2019_S47_item_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S47",
+    "child": "CPA_2019_S47_final_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S49",
+    "child": "CPA_2019_S49_sub_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S51",
+    "child": "CPA_2019_S51_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S51",
+    "child": "CPA_2019_S51_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S53",
+    "child": "CPA_2019_S53_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S53",
+    "child": "CPA_2019_S53_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S54",
+    "child": "CPA_2019_S54_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S54",
+    "child": "CPA_2019_S54_final_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S55",
+    "child": "CPA_2019_S55_main_main_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S55",
+    "child": "CPA_2019_S55_dep_dep_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S57",
+    "child": "CPA_2019_S57_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S57",
+    "child": "CPA_2019_S57_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S58",
+    "child": "CPA_2019_S58_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S58",
+    "child": "CPA_2019_S58_item_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S58",
+    "child": "CPA_2019_S58_item_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S58",
+    "child": "CPA_2019_S58_final_4",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S59",
+    "child": "CPA_2019_S59_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S59",
+    "child": "CPA_2019_S59_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S67",
+    "child": "CPA_2019_S67_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S67",
+    "child": "CPA_2019_S67_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S69",
+    "child": "CPA_2019_S69_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S69",
+    "child": "CPA_2019_S69_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S70",
+    "child": "CPA_2019_S70_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S70",
+    "child": "CPA_2019_S70_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S73",
+    "child": "CPA_2019_S73_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S73",
+    "child": "CPA_2019_S73_item_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S73",
+    "child": "CPA_2019_S73_final_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S74",
+    "child": "CPA_2019_S74_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S74",
+    "child": "CPA_2019_S74_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S74",
+    "child": "CPA_2019_S74_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S75",
+    "child": "CPA_2019_S75_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S75",
+    "child": "CPA_2019_S75_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S75",
+    "child": "CPA_2019_S75_sent_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S79",
+    "child": "CPA_2019_S79_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S79",
+    "child": "CPA_2019_S79_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S80",
+    "child": "CPA_2019_S80_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S80",
+    "child": "CPA_2019_S80_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S81",
+    "child": "CPA_2019_S81_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S81",
+    "child": "CPA_2019_S81_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S85",
+    "child": "CPA_2019_S85_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S85",
+    "child": "CPA_2019_S85_item_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S86",
+    "child": "CPA_2019_S86_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S86",
+    "child": "CPA_2019_S86_item_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S86",
+    "child": "CPA_2019_S86_item_3",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S87",
+    "child": "CPA_2019_S87_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S87",
+    "child": "CPA_2019_S87_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S89",
+    "child": "CPA_2019_S89_item_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S89",
+    "child": "CPA_2019_S89_final_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S99",
+    "child": "CPA_2019_S99_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S99",
+    "child": "CPA_2019_S99_sent_2",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S105",
+    "child": "CPA_2019_S105_sent_1",
+    "relation": "contains_clause"
+  },
+  {
+    "parent": "CPA_2019_S105",
+    "child": "CPA_2019_S105_sent_2",
+    "relation": "contains_clause"
+  }
+]

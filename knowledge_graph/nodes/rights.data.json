@@ -1,0 +1,352 @@
+[
+  {
+    "right_id": "CPA_2019_R_001",
+    "description": "The right to be protected against the marketing of goods, products or services which are hazardous to life and property",
+    "granted_by": "CPA_2019_S2",
+    "right_type": "consumer_right",
+    "beneficiary": "consumer",
+    "scope": "safety protection",
+    "enforcement_mechanism": "Central Consumer Protection Authority",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_R_002",
+    "description": "The right to be informed about the quality, quantity, potency, purity, standard and price of goods, products or services",
+    "granted_by": "CPA_2019_S2",
+    "right_type": "consumer_right",
+    "beneficiary": "consumer",
+    "scope": "information disclosure",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_R_003",
+    "description": "The right to be assured, wherever possible, access to a variety of goods, products or services at competitive prices",
+    "granted_by": "CPA_2019_S2",
+    "right_type": "consumer_right",
+    "beneficiary": "consumer",
+    "scope": "market access and choice",
+    "enforcement_mechanism": "Market regulation",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_R_004",
+    "description": "The right to be heard and to be assured that consumer interests will receive due consideration at appropriate fora",
+    "granted_by": "CPA_2019_S2",
+    "right_type": "consumer_right",
+    "beneficiary": "consumer",
+    "scope": "representation and voice",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_R_005",
+    "description": "The right to seek redressal against unfair trade practice or restrictive trade practices or unscrupulous exploitation of consumers",
+    "granted_by": "CPA_2019_S2",
+    "right_type": "consumer_right",
+    "beneficiary": "consumer",
+    "scope": "redressal mechanism",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_R_006",
+    "description": "The right to consumer awareness",
+    "granted_by": "CPA_2019_S2",
+    "right_type": "consumer_right",
+    "beneficiary": "consumer",
+    "scope": "education and awareness",
+    "enforcement_mechanism": "Consumer Protection Councils",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S16_R_001",
+    "description": "Right to file complaint as provided in Section 16",
+    "granted_by": "CPA_2019_S16",
+    "right_type": "procedural_right",
+    "beneficiary": "consumer",
+    "scope": "complaint filing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S18_R_001",
+    "description": "Right to file complaint as provided in Section 18",
+    "granted_by": "CPA_2019_S18",
+    "right_type": "procedural_right",
+    "beneficiary": "consumer",
+    "scope": "complaint filing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S19_R_001",
+    "description": "Right to file complaint as provided in Section 19",
+    "granted_by": "CPA_2019_S19",
+    "right_type": "procedural_right",
+    "beneficiary": "consumer",
+    "scope": "complaint filing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S20_R_001",
+    "description": "Right to opportunity of being heard as provided in Section 20",
+    "granted_by": "CPA_2019_S20",
+    "right_type": "procedural_right",
+    "beneficiary": "party to proceedings",
+    "scope": "fair hearing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S21_R_001",
+    "description": "Right to opportunity of being heard as provided in Section 21",
+    "granted_by": "CPA_2019_S21",
+    "right_type": "procedural_right",
+    "beneficiary": "party to proceedings",
+    "scope": "fair hearing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S35_R_001",
+    "description": "Right to file complaint as provided in Section 35",
+    "granted_by": "CPA_2019_S35",
+    "right_type": "procedural_right",
+    "beneficiary": "consumer",
+    "scope": "complaint filing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S36_R_001",
+    "description": "Right to file complaint as provided in Section 36",
+    "granted_by": "CPA_2019_S36",
+    "right_type": "procedural_right",
+    "beneficiary": "consumer",
+    "scope": "complaint filing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S36_R_002",
+    "description": "Right to opportunity of being heard as provided in Section 36",
+    "granted_by": "CPA_2019_S36",
+    "right_type": "procedural_right",
+    "beneficiary": "party to proceedings",
+    "scope": "fair hearing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S37_R_001",
+    "description": "Right to mediation as provided in Section 37",
+    "granted_by": "CPA_2019_S37",
+    "right_type": "procedural_right",
+    "beneficiary": "parties to dispute",
+    "scope": "alternative dispute resolution",
+    "enforcement_mechanism": "Consumer Mediation Cell",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S38_R_001",
+    "description": "Right to file complaint as provided in Section 38",
+    "granted_by": "CPA_2019_S38",
+    "right_type": "procedural_right",
+    "beneficiary": "consumer",
+    "scope": "complaint filing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S38_R_002",
+    "description": "Right to mediation as provided in Section 38",
+    "granted_by": "CPA_2019_S38",
+    "right_type": "procedural_right",
+    "beneficiary": "parties to dispute",
+    "scope": "alternative dispute resolution",
+    "enforcement_mechanism": "Consumer Mediation Cell",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S39_R_001",
+    "description": "Right to compensation as provided in Section 39",
+    "granted_by": "CPA_2019_S39",
+    "right_type": "remedy_right",
+    "beneficiary": "consumer",
+    "scope": "monetary relief",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S39_R_002",
+    "description": "Right to product liability action as provided in Section 39",
+    "granted_by": "CPA_2019_S39",
+    "right_type": "remedy_right",
+    "beneficiary": "consumer",
+    "scope": "defective product claims",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S41_R_001",
+    "description": "Right to prefer appeal as provided in Section 41",
+    "granted_by": "CPA_2019_S41",
+    "right_type": "procedural_right",
+    "beneficiary": "aggrieved person",
+    "scope": "appellate remedy",
+    "enforcement_mechanism": "Higher Consumer Commission",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S51_R_001",
+    "description": "Right to prefer appeal as provided in Section 51",
+    "granted_by": "CPA_2019_S51",
+    "right_type": "procedural_right",
+    "beneficiary": "aggrieved person",
+    "scope": "appellate remedy",
+    "enforcement_mechanism": "Higher Consumer Commission",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S67_R_001",
+    "description": "Right to prefer appeal as provided in Section 67",
+    "granted_by": "CPA_2019_S67",
+    "right_type": "procedural_right",
+    "beneficiary": "aggrieved person",
+    "scope": "appellate remedy",
+    "enforcement_mechanism": "Higher Consumer Commission",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S68_R_001",
+    "description": "Right to prefer appeal as provided in Section 68",
+    "granted_by": "CPA_2019_S68",
+    "right_type": "procedural_right",
+    "beneficiary": "aggrieved person",
+    "scope": "appellate remedy",
+    "enforcement_mechanism": "Higher Consumer Commission",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S69_R_001",
+    "description": "Right to file complaint as provided in Section 69",
+    "granted_by": "CPA_2019_S69",
+    "right_type": "procedural_right",
+    "beneficiary": "consumer",
+    "scope": "complaint filing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S74_R_001",
+    "description": "Right to mediation as provided in Section 74",
+    "granted_by": "CPA_2019_S74",
+    "right_type": "procedural_right",
+    "beneficiary": "parties to dispute",
+    "scope": "alternative dispute resolution",
+    "enforcement_mechanism": "Consumer Mediation Cell",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S75_R_001",
+    "description": "Right to mediation as provided in Section 75",
+    "granted_by": "CPA_2019_S75",
+    "right_type": "procedural_right",
+    "beneficiary": "parties to dispute",
+    "scope": "alternative dispute resolution",
+    "enforcement_mechanism": "Consumer Mediation Cell",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S79_R_001",
+    "description": "Right to mediation as provided in Section 79",
+    "granted_by": "CPA_2019_S79",
+    "right_type": "procedural_right",
+    "beneficiary": "parties to dispute",
+    "scope": "alternative dispute resolution",
+    "enforcement_mechanism": "Consumer Mediation Cell",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S82_R_001",
+    "description": "Right to compensation as provided in Section 82",
+    "granted_by": "CPA_2019_S82",
+    "right_type": "remedy_right",
+    "beneficiary": "consumer",
+    "scope": "monetary relief",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S82_R_002",
+    "description": "Right to product liability action as provided in Section 82",
+    "granted_by": "CPA_2019_S82",
+    "right_type": "remedy_right",
+    "beneficiary": "consumer",
+    "scope": "defective product claims",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S83_R_001",
+    "description": "Right to product liability action as provided in Section 83",
+    "granted_by": "CPA_2019_S83",
+    "right_type": "remedy_right",
+    "beneficiary": "consumer",
+    "scope": "defective product claims",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S84_R_001",
+    "description": "Right to product liability action as provided in Section 84",
+    "granted_by": "CPA_2019_S84",
+    "right_type": "remedy_right",
+    "beneficiary": "consumer",
+    "scope": "defective product claims",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S85_R_001",
+    "description": "Right to product liability action as provided in Section 85",
+    "granted_by": "CPA_2019_S85",
+    "right_type": "remedy_right",
+    "beneficiary": "consumer",
+    "scope": "defective product claims",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S87_R_001",
+    "description": "Right to product liability action as provided in Section 87",
+    "granted_by": "CPA_2019_S87",
+    "right_type": "remedy_right",
+    "beneficiary": "consumer",
+    "scope": "defective product claims",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S92_R_001",
+    "description": "Right to file complaint as provided in Section 92",
+    "granted_by": "CPA_2019_S92",
+    "right_type": "procedural_right",
+    "beneficiary": "consumer",
+    "scope": "complaint filing",
+    "enforcement_mechanism": "Consumer Disputes Redressal Commissions",
+    "related_sections": []
+  },
+  {
+    "right_id": "CPA_2019_S103_R_001",
+    "description": "Right to mediation as provided in Section 103",
+    "granted_by": "CPA_2019_S103",
+    "right_type": "procedural_right",
+    "beneficiary": "parties to dispute",
+    "scope": "alternative dispute resolution",
+    "enforcement_mechanism": "Consumer Mediation Cell",
+    "related_sections": []
+  }
+]

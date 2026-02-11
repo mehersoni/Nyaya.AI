@@ -1,0 +1,32 @@
+[
+    {
+        "source": "CPA_2019_S2",
+        "target": "CPA_2019_R_SAFETY",
+        "relation": "defines"
+    },
+    {
+        "source": "CPA_2019_S2",
+        "target": "CPA_2019_R_INFORMATION",
+        "relation": "defines"
+    },
+    {
+        "source": "CPA_2019_S2",
+        "target": "CPA_2019_R_CHOICE",
+        "relation": "defines"
+    },
+    {
+        "source": "CPA_2019_S2",
+        "target": "CPA_2019_R_HEARD",
+        "relation": "defines"
+    },
+    {
+        "source": "CPA_2019_S2",
+        "target": "CPA_2019_R_REDRESSAL",
+        "relation": "defines"
+    },
+    {
+        "source": "CPA_2019_S2",
+        "target": "CPA_2019_R_AWARENESS",
+        "relation": "defines"
+    }
+]
