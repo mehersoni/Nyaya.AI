@@ -1,0 +1,344 @@
+{
+  "test_start_time": "2026-01-29T14:44:31.243988",
+  "total_queries": 15,
+  "successful_queries": 15,
+  "failed_queries": 0,
+  "query_results": [
+    {
+      "query": "What is a consumer?",
+      "query_type": "definition_lookup",
+      "success": true,
+      "processing_time": 2.370364189147949,
+      "response_length": 1642,
+      "citation_count": 2,
+      "cited_sections": [
+        "2",
+        "2"
+      ],
+      "expected_sections": [
+        "2"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 1.0,
+      "confidence_score": 0.7333333333333333,
+      "response_preview": "**Definition: Consumer**\n\nany person who --- buys any goods for a consideration which has been paid or promised or partly paid and partly promised, or under any system of deferred payment and includes..."
+    },
+    {
+      "query": "Define misleading advertisement",
+      "query_type": "definition_lookup",
+      "success": true,
+      "processing_time": 2.401350975036621,
+      "response_length": 572,
+      "citation_count": 2,
+      "cited_sections": [
+        "2",
+        "2"
+      ],
+      "expected_sections": [
+        "2"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 1.0,
+      "confidence_score": 0.7333333333333333,
+      "response_preview": "**Definition: Misleading Advertisement**\n\nan advertisement in relation to any product or service which falsely describes such product or service, or gives a false guarantee to or is likely to mislead ..."
+    },
+    {
+      "query": "What does defect mean?",
+      "query_type": "definition_lookup",
+      "success": true,
+      "processing_time": 2.332976818084717,
+      "response_length": 533,
+      "citation_count": 2,
+      "cited_sections": [
+        "2",
+        "2"
+      ],
+      "expected_sections": [
+        "2"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 1.0,
+      "confidence_score": 0.7333333333333333,
+      "response_preview": "**Definition: Defect**\n\nany fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintained by or under any law for the time being in force ..."
+    },
+    {
+      "query": "Explain unfair trade practice",
+      "query_type": "definition_lookup",
+      "success": true,
+      "processing_time": 2.3377299308776855,
+      "response_length": 1681,
+      "citation_count": 2,
+      "cited_sections": [
+        "2",
+        "2"
+      ],
+      "expected_sections": [
+        "2"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 1.0,
+      "confidence_score": 0.7333333333333333,
+      "response_preview": "**Definition: Unfair Trade Practice**\n\na trade practice which, for the purpose of promoting the sale, use or supply of any goods or for the provision of any service, adopts any unfair method or unfair..."
+    },
+    {
+      "query": "Show me Section 35",
+      "query_type": "section_retrieval",
+      "success": true,
+      "processing_time": 2.357912302017212,
+      "response_length": 692,
+      "citation_count": 1,
+      "cited_sections": [
+        "35"
+      ],
+      "expected_sections": [
+        "35"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 0.0,
+      "confidence_score": 0.8999999999999999,
+      "response_preview": "**The complaint may be filed electronically in such manner as may be prescribed.**\n\nA complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any service provided or..."
+    },
+    {
+      "query": "What is Section 21?",
+      "query_type": "section_retrieval",
+      "success": true,
+      "processing_time": 2.442857265472412,
+      "response_length": 2757,
+      "citation_count": 1,
+      "cited_sections": [
+        "21"
+      ],
+      "expected_sections": [
+        "21"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 0.0,
+      "confidence_score": 0.7,
+      "response_preview": "**The Central Authority may impose a penalty on a manufacturer or endorser which may extend to ten lakh rupees and, for every subsequent contravention, up to fifty lakh rupees. The Central Authority m..."
+    },
+    {
+      "query": "Find Section 18",
+      "query_type": "section_retrieval",
+      "success": true,
+      "processing_time": 2.3847641944885254,
+      "response_length": 3639,
+      "citation_count": 1,
+      "cited_sections": [
+        "18"
+      ],
+      "expected_sections": [
+        "18"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 0.0,
+      "confidence_score": 0.8999999999999999,
+      "response_preview": "**Without prejudice to the generality of these provisions, the Central Authority may inquire or cause an inquiry or investigation to be made into violations of consumer rights or unfair trade practice..."
+    },
+    {
+      "query": "Get Section 39",
+      "query_type": "section_retrieval",
+      "success": true,
+      "processing_time": 2.4354944229125977,
+      "response_length": 658,
+      "citation_count": 1,
+      "cited_sections": [
+        "39"
+      ],
+      "expected_sections": [
+        "39"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 0.0,
+      "confidence_score": 0.6000000000000001,
+      "response_preview": "****\n\nWhere the District Commission is satisfied that the goods complained against suffer from any of the defects specified in the complaint or that any of the allegations contained in the complaint a..."
+    },
+    {
+      "query": "What are consumer rights?",
+      "query_type": "rights_query",
+      "success": true,
+      "processing_time": 2.336597442626953,
+      "response_length": 275,
+      "citation_count": 2,
+      "cited_sections": [
+        "2",
+        "2"
+      ],
+      "expected_sections": [
+        "2"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 0.0,
+      "confidence_score": 0.75,
+      "response_preview": "**Legal Provision**\n\nI found a relevant provision but the detailed text is not available in the current knowledge base. Please try a more specific query or refer to the complete Consumer Protection Ac..."
+    },
+    {
+      "query": "What are my rights as a consumer?",
+      "query_type": "rights_query",
+      "success": true,
+      "processing_time": 2.3737354278564453,
+      "response_length": 275,
+      "citation_count": 2,
+      "cited_sections": [
+        "2",
+        "2"
+      ],
+      "expected_sections": [
+        "2"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 0.0,
+      "confidence_score": 0.75,
+      "response_preview": "**Legal Provision**\n\nI found a relevant provision but the detailed text is not available in the current knowledge base. Please try a more specific query or refer to the complete Consumer Protection Ac..."
+    },
+    {
+      "query": "Consumer protection rights",
+      "query_type": "rights_query",
+      "success": true,
+      "processing_time": 2.321842670440674,
+      "response_length": 275,
+      "citation_count": 2,
+      "cited_sections": [
+        "2",
+        "2"
+      ],
+      "expected_sections": [
+        "2"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 0.0,
+      "confidence_score": 0.75,
+      "response_preview": "**Legal Provision**\n\nI found a relevant provision but the detailed text is not available in the current knowledge base. Please try a more specific query or refer to the complete Consumer Protection Ac..."
+    },
+    {
+      "query": "I bought defective goods",
+      "query_type": "scenario_analysis",
+      "success": true,
+      "processing_time": 2.763366222381592,
+      "response_length": 1018,
+      "citation_count": 3,
+      "cited_sections": [
+        "2",
+        "35",
+        "39"
+      ],
+      "expected_sections": [
+        "35",
+        "39"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 1.0,
+      "confidence_score": 0.55,
+      "response_preview": "**Defective Goods - Your Consumer Rights**\n\n**What constitutes a defect:**\nany fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard which is required to be maintain..."
+    },
+    {
+      "query": "I came across a false advertisement",
+      "query_type": "scenario_analysis",
+      "success": true,
+      "processing_time": 2.8680434226989746,
+      "response_length": 1286,
+      "citation_count": 5,
+      "cited_sections": [
+        "2",
+        "2",
+        "18",
+        "21",
+        "35"
+      ],
+      "expected_sections": [
+        "18",
+        "21",
+        "35"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 1.0,
+      "confidence_score": 0.55,
+      "response_preview": "**False/Misleading Advertisement - Your Legal Options**\n\n**What constitutes misleading advertisement:**\nan advertisement in relation to any product or service which falsely describes such product or s..."
+    },
+    {
+      "query": "The seller is overcharging me",
+      "query_type": "scenario_analysis",
+      "success": true,
+      "processing_time": 2.6718735694885254,
+      "response_length": 638,
+      "citation_count": 2,
+      "cited_sections": [
+        "35",
+        "39"
+      ],
+      "expected_sections": [
+        "35",
+        "39"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 0.0,
+      "confidence_score": 0.6,
+      "response_preview": "**Legal Information - Consumer Protection Act 2019**\n\n**Relevant Legal Provisions:**\n- **Section 35:** A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any ..."
+    },
+    {
+      "query": "How to file a consumer complaint?",
+      "query_type": "scenario_analysis",
+      "success": true,
+      "processing_time": 2.9541289806365967,
+      "response_length": 674,
+      "citation_count": 3,
+      "cited_sections": [
+        "35",
+        "39",
+        "2"
+      ],
+      "expected_sections": [
+        "35",
+        "39"
+      ],
+      "section_accuracy": 1.0,
+      "definition_accuracy": 0.0,
+      "confidence_score": 0.6,
+      "response_preview": "**Legal Information - Consumer Protection Act 2019**\n\n**Relevant Legal Provisions:**\n- **Section 35:** A complaint, in relation to any goods sold or delivered or agreed to be sold or delivered or any ..."
+    }
+  ],
+  "performance_metrics": {
+    "avg_processing_time": 2.490202522277832,
+    "min_processing_time": 2.321842670440674,
+    "max_processing_time": 2.9541289806365967,
+    "total_processing_time": 37.35303783416748
+  },
+  "accuracy_metrics": {
+    "avg_section_accuracy": 1.0,
+    "avg_definition_accuracy": 0.4,
+    "avg_confidence_score": 0.7055555555555555,
+    "perfect_section_matches": 15,
+    "perfect_definition_matches": 6
+  },
+  "coverage_metrics": {
+    "avg_response_length": 1107.6666666666667,
+    "avg_citation_count": 2.066666666666667,
+    "min_response_length": 275,
+    "max_response_length": 3639
+  },
+  "query_type_performance": {
+    "definition_lookup": {
+      "count": 4,
+      "success_rate": 1.0,
+      "avg_processing_time": 2.360605478286743,
+      "avg_accuracy": 1.0
+    },
+    "section_retrieval": {
+      "count": 4,
+      "success_rate": 1.0,
+      "avg_processing_time": 2.4052570462226868,
+      "avg_accuracy": 1.0
+    },
+    "rights_query": {
+      "count": 3,
+      "success_rate": 1.0,
+      "avg_processing_time": 2.3440585136413574,
+      "avg_accuracy": 1.0
+    },
+    "scenario_analysis": {
+      "count": 4,
+      "success_rate": 1.0,
+      "avg_processing_time": 2.814353048801422,
+      "avg_accuracy": 1.0
+    }
+  }
+}

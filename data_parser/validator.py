@@ -73,20 +73,38 @@ def validate_referential_integrity(root: Path):
             raise ReferentialIntegrityError(
                 f"Contains edge refers to unknown child '{c['child']}'"
             )
+        
+    # ---- contains_clause edges ----
+    contains = _load(root / "knowledge_graph/edges/contains.data.json")
+
+    for c in contains:
+        if c["parent"] not in section_ids:
+            raise ReferentialIntegrityError(
+                f"Contains edge refers to unknown parent section '{c['parent']}'"
+            )
+
+
+
+
 
 def validate_knowledge_graph(root: Path):
     # Step 2: schema validation
     pairs = [
-        ("knowledge_graph/nodes/sections.data.json", "knowledge_graph/nodes/sections.schema.json"),
-        ("knowledge_graph/nodes/definitions.data.json", "knowledge_graph/nodes/definitions.schema.json"),
-        ("knowledge_graph/nodes/rights.data.json", "knowledge_graph/nodes/rights.schema.json"),
-        ("knowledge_graph/edges/references.data.json", "knowledge_graph/edges/references.schema.json"),
-        ("knowledge_graph/edges/defines.data.json", "knowledge_graph/edges/defines.schema.json"),
-        ("knowledge_graph/edges/contains.data.json", "knowledge_graph/edges/contains.schema.json"),
-    ]
+    ("knowledge_graph/nodes/sections.data.json", "knowledge_graph/nodes/sections.schema.json"),
+    ("knowledge_graph/nodes/definitions.data.json", "knowledge_graph/nodes/definitions.schema.json"),
+    ("knowledge_graph/nodes/rights.data.json", "knowledge_graph/nodes/rights.schema.json"),
+    ("knowledge_graph/nodes/clauses.data.json", "knowledge_graph/nodes/clauses.schema.json"),
+    ("knowledge_graph/edges/references.data.json", "knowledge_graph/edges/references.schema.json"),
+    ("knowledge_graph/edges/defines.data.json", "knowledge_graph/edges/defines.schema.json"),
+    ("knowledge_graph/edges/contains.data.json", "knowledge_graph/edges/contains.schema.json"),
+    ("knowledge_graph/edges/contains_clause.data.json", "knowledge_graph/edges/contains_clause.schema.json")
+]
+
 
     for data_rel, schema_rel in pairs:
         validate_file(root / data_rel, root / schema_rel)
 
     # Step 3: referential integrity
     validate_referential_integrity(root)
+
+    

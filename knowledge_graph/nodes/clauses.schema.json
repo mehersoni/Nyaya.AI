@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Clauses",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "clause_id",
+            "parent_section",
+            "label",
+            "text"
+        ],
+        "properties": {
+            "clause_id": {
+                "type": "string"
+            },
+            "parent_section": {
+                "type": "string"
+            },
+            "label": {
+                "type": "string"
+            },
+            "text": {
+                "type": "string"
+            },
+            "clause_type": {
+                "type": "string",
+                "enum": [
+                    "numeric",
+                    "alpha",
+                    "roman",
+                    "subsection",
+                    "proviso",
+                    "explanation",
+                    "sentence",
+                    "main_clause",
+                    "dependent_clause",
+                    "semicolon_item",
+                    "final_item",
+                    "list_numbered_list",
+                    "list_lettered_list",
+                    "list_bullet_list"
+                ]
+            }
+        },
+        "additionalProperties": false
+    }
+}

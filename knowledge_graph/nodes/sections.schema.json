@@ -20,17 +20,46 @@
             "section_number": {
                 "type": "string"
             },
+            "title": {
+                "type": "string",
+                "description": "Section title extracted from heading"
+            },
             "text": {
                 "type": "string"
             },
             "chapter": {
                 "type": "string"
             },
-            "source_pdf": {
-                "type": "string"
+            "chapter_title": {
+                "type": "string",
+                "description": "Title of the chapter this section belongs to"
             },
-            "page_number": {
-                "type": "integer"
+            "source_pdf": {
+                "type": "string",
+                "description": "Name of the source PDF file"
+            },
+            "page_numbers": {
+                "type": "array",
+                "items": {
+                    "type": "integer"
+                },
+                "description": "All page numbers this section spans"
+            },
+            "start_page": {
+                "type": "integer",
+                "description": "First page number where section appears"
+            },
+            "end_page": {
+                "type": "integer",
+                "description": "Last page number where section appears"
+            },
+            "page_count": {
+                "type": "integer",
+                "description": "Number of pages this section spans"
+            },
+            "page_range": {
+                "type": "string",
+                "description": "Human-readable page range (e.g., '5-7' or '5')"
             }
         },
         "additionalProperties": false

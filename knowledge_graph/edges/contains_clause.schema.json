@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ContainsClauseEdges",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "parent",
+            "child",
+            "relation"
+        ],
+        "properties": {
+            "parent": {
+                "type": "string"
+            },
+            "child": {
+                "type": "string"
+            },
+            "relation": {
+                "type": "string",
+                "enum": [
+                    "contains_clause"
+                ]
+            }
+        },
+        "additionalProperties": false
+    }
+}

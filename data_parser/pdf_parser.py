@@ -1,11 +1,16 @@
 from pathlib import Path
+from typing import List, Dict
 import pdfplumber
 
-def extract_pdf_text(pdf_path: Path) -> str:
-    text_blocks = []
+def extract_pdf_text(pdf_path: Path) -> List[Dict]:
+    """
+    Extract text from PDF with page number tracking.
+    Returns list of page data with page numbers.
+    """
+    pages_data = []
 
     with pdfplumber.open(pdf_path) as pdf:
-        for page in pdf.pages:
+        for page_num, page in enumerate(pdf.pages, 1):
             page_text = page.extract_text()
             if not page_text:
                 continue
@@ -16,6 +21,17 @@ def extract_pdf_text(pdf_path: Path) -> str:
                 if line:
                     cleaned_lines.append(line)
 
-            text_blocks.append("\n".join(cleaned_lines))
+            pages_data.append({
+                "page_number": page_num,
+                "text": "\n".join(cleaned_lines)
+            })
 
-    return "\n".join(text_blocks)
+    return pages_data
+
+def extract_pdf_text_raw(pdf_path: Path) -> str:
+    """
+    Legacy function for backward compatibility.
+    Returns raw text without page structure.
+    """
+    pages_data = extract_pdf_text(pdf_path)
+    return "\n".join(page["text"] for page in pages_data)

@@ -1,0 +1,55 @@
+{
+    "name": "nyayamrit-frontend",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@chakra-ui/react": "^2.8.2",
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "framer-motion": "^10.16.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "5.0.1",
+        "react-redux": "^9.0.4",
+        "@reduxjs/toolkit": "^2.0.1",
+        "axios": "^1.6.2",
+        "react-markdown": "^9.0.1",
+        "react-syntax-highlighter": "^15.5.0",
+        "react-icons": "^4.12.0",
+        "web-vitals": "^3.5.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.1.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^14.5.1",
+        "@types/jest": "^29.5.8",
+        "@types/node": "^20.9.4",
+        "@types/react": "^18.2.38",
+        "@types/react-dom": "^18.2.17",
+        "typescript": "^5.3.2"
+    }
+}

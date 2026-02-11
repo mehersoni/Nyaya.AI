@@ -1,28 +1,103 @@
-# --------------------
-# Python artifacts
-# --------------------
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Research data (optional - keep if needed)
+research_analysis/figures/*.png
+research_analysis/figures/*.pdf
+
+# Node modules (for web interface)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
 *.pyc
 *.pyo
+*.pyd
+.Python
 
-# --------------------
-# Local / experimental scripts
-# --------------------
-data_parser/definition_extractor.py
-data_parser/definition_formatter.py
-
-# --------------------
-# Raw text & intermediate dumps
-# --------------------
-data_parser/section2_raw.txt
-
-# --------------------
-# Source documents (PDFs, scans)
-# --------------------
-data_parser/source_pdfs/
-
-# --------------------
-# OS / editor noise
-# --------------------
-.DS_Store
+# OS
 Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# API Keys (important!)
+**/GEMINI_API_KEY
+**/OPENAI_API_KEY
+**/.env
+
+# Large files (if any)
+*.mp4
+*.avi
+*.mov
+*.wmv
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so

@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800">{{ system_name }}</h1>
+                    <p class="text-gray-600 mt-2">GraphRAG-based Legal Assistant for Indian Consumer Protection Law</p>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm text-gray-500">System Uptime</div>
+                    <div class="text-2xl font-bold text-green-600">{{ uptime }}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <a href="/demo/live" class="bg-blue-500 hover:bg-blue-600 text-white p-6 rounded-lg shadow-lg transition-colors">
+                <i class="fas fa-play-circle text-3xl mb-3"></i>
+                <h3 class="text-xl font-semibold">Live Demo</h3>
+                <p class="text-blue-100">Try the interactive query interface</p>
+            </a>
+            
+            <a href="/api/docs" class="bg-green-500 hover:bg-green-600 text-white p-6 rounded-lg shadow-lg transition-colors">
+                <i class="fas fa-book text-3xl mb-3"></i>
+                <h3 class="text-xl font-semibold">API Documentation</h3>
+                <p class="text-green-100">Explore the REST API endpoints</p>
+            </a>
+            
+            <a href="/demo/health" class="bg-purple-500 hover:bg-purple-600 text-white p-6 rounded-lg shadow-lg transition-colors">
+                <i class="fas fa-heartbeat text-3xl mb-3"></i>
+                <h3 class="text-xl font-semibold">System Health</h3>
+                <p class="text-purple-100">Check system status and metrics</p>
+            </a>
+        </div>
+
+        <!-- Statistics Dashboard -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-search text-blue-500 text-2xl mr-3"></i>
+                    <div>
+                        <div class="text-2xl font-bold">{{ stats.total_queries }}</div>
+                        <div class="text-gray-600">Total Queries</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-green-500 text-2xl mr-3"></i>
+                    <div>
+                        <div class="text-2xl font-bold">{{ stats.successful_queries }}</div>
+                        <div class="text-gray-600">Successful Queries</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-yellow-500 text-2xl mr-3"></i>
+                    <div>
+                        <div class="text-2xl font-bold">{{ "%.3f"|format(stats.average_response_time) }}s</div>
+                        <div class="text-gray-600">Avg Response Time</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-database text-indigo-500 text-2xl mr-3"></i>
+                    <div>
+                        <div class="text-2xl font-bold">{{ stats.knowledge_graph_stats.get('sections_loaded', 0) }}</div>
+                        <div class="text-gray-600">Legal Sections</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Knowledge Graph Statistics -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">Knowledge Graph Statistics</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-600">{{ stats.knowledge_graph_stats.get('sections_loaded', 0) }}</div>
+                    <div class="text-gray-600">Sections</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-green-600">{{ stats.knowledge_graph_stats.get('definitions_loaded', 0) }}</div>
+                    <div class="text-gray-600">Definitions</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-purple-600">{{ stats.knowledge_graph_stats.get('rights_loaded', 0) }}</div>
+                    <div class="text-gray-600">Rights</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-red-600">{{ stats.knowledge_graph_stats.get('clauses_loaded', 0) }}</div>
+                    <div class="text-gray-600">Clauses</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">Recent Query Activity</h2>
+            <div id="recent-queries" class="space-y-3">
+                {% for query in stats.recent_queries[-5:] %}
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                    <div class="flex-1">
+                        <div class="font-medium">{{ query.query }}</div>
+                        <div class="text-sm text-gray-600">{{ query.audience }} • {{ query.timestamp }}</div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm">{{ "%.3f"|format(query.response_time) }}s</span>
+                        {% if query.success %}
+                        <i class="fas fa-check-circle text-green-500"></i>
+                        {% else %}
+                        <i class="fas fa-times-circle text-red-500"></i>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-8 text-gray-600">
+            <p>Nyayamrit Deployment Demo • Last Updated: {{ current_time }}</p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-refresh stats every 30 seconds
+        setInterval(async () => {
+            try {
+                const response = await fetch('/demo/stats');
+                const stats = await response.json();
+                
+                // Update counters
+                document.querySelector('[data-stat="total_queries"]').textContent = stats.total_queries;
+                document.querySelector('[data-stat="successful_queries"]').textContent = stats.successful_queries;
+                document.querySelector('[data-stat="average_response_time"]').textContent = stats.average_response_time.toFixed(3) + 's';
+                
+                // Update recent queries
+                const recentQueriesDiv = document.getElementById('recent-queries');
+                recentQueriesDiv.innerHTML = stats.recent_queries.slice(-5).map(query => `
+                    <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                        <div class="flex-1">
+                            <div class="font-medium">${query.query}</div>
+                            <div class="text-sm text-gray-600">${query.audience} • ${query.timestamp}</div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-sm">${query.response_time.toFixed(3)}s</span>
+                            ${query.success ? 
+                                '<i class="fas fa-check-circle text-green-500"></i>' : 
+                                '<i class="fas fa-times-circle text-red-500"></i>'
+                            }
+                        </div>
+                    </div>
+                `).join('');
+                
+            } catch (error) {
+                console.error('Failed to update stats:', error);
+            }
+        }, 30000);
+    </script>
+</body>
+</html>
+    
