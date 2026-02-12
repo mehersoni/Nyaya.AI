@@ -1,154 +1,170 @@
+# Nyayamrit  
+## An Intelligent Legal Assistance System for Consumer Protection in India  
 
+**Nyayamrit (न्यायामृत)** — meaning “essence of justice” — is a Graph-Constrained Legal Reasoning System designed to improve the reliability, traceability, and accessibility of consumer law in India.
 
-# Nyayamrit
-
-### An Intelligent Legal Assistance System for Consumer Protection in India
-
-Nyayamrit (न्यायामृत) — meaning *“essence of justice”* — is an AI-powered legal assistance system designed to make consumer law in India accessible, accurate, and trustworthy.
-
-The system focuses on the **Consumer Protection Act, 2019** and enables users to ask natural language questions and receive **statute-grounded, explainable, and hallucination-free responses**.
+The system currently focuses on the **Consumer Protection Act, 2019** and enables users to ask natural language questions while ensuring responses are grounded in verifiable statutory sources.
 
 ---
 
 ## 🚨 Problem
 
-India has over **4.5 crore pending court cases**, with a significant number involving civil and consumer disputes.
+India has over 4.5 crore pending court cases, with a substantial number involving civil and consumer disputes.
 
-Key challenges:
+Structural challenges include:
 
-* Complex legal English limits citizen understanding
-* Legal consultation is costly
-* AI legal chatbots often hallucinate non-existent legal sections
-* Government portals help file complaints, but not understand the law
+- Legal English limits citizen accessibility  
+- Professional consultation is costly  
+- General-purpose LLM legal chatbots hallucinate statutory provisions  
+- Government portals assist with filing complaints but do not explain the law  
+- Limited availability of explainable, statute-grounded AI systems  
 
-There is no trustworthy, multilingual, explainable AI system for consumer law guidance.
+Legal AI systems must prioritize **traceability and correctness**, not fluency alone.
 
 ---
 
-## 💡 Solution
+## 💡 Approach
 
-Nyayamrit uses a **Graph-Constrained Legal Reasoning Architecture (GraphRAG)** to ensure:
+Nyayamrit implements a **Graph-Constrained Retrieval-Augmented Generation (GraphRAG)** architecture.
 
-* ✅ 100% statutory section accuracy
-* ✅ Zero hallucinated legal provisions
-* ✅ Explainable reasoning paths
-* ✅ Multilingual support (via Bhashini)
-* ✅ Low-latency responses
+Instead of free-form generation, the system:
 
-Unlike generic LLM chatbots, Nyayamrit does not freely generate legal content.
-It retrieves verified statutory nodes from a Legal Knowledge Graph and uses an LLM only for explanation within strict constraints.
+1. Retrieves verified statutory nodes from a structured Legal Knowledge Graph  
+2. Performs deterministic graph traversal for section-level grounding  
+3. Uses an LLM strictly for constrained explanation  
+4. Returns citation-first responses  
+
+This architecture separates:
+
+- **Deterministic retrieval and reasoning (graph-based)**
+- **Controlled explanation (generation layer)**
+
+This reduces hallucination risk and improves legal reliability.
 
 ---
 
 ## 🏗 System Architecture
 
-1. Legal text ingestion from official sources (India Code)
-2. Structural parsing (Act → Chapter → Section → Clause)
-3. Entity extraction (definitions, rights, remedies, penalties)
-4. Neo4j Legal Knowledge Graph construction
-5. Deterministic graph traversal for query retrieval
-6. Graph-constrained LLM explanation
-7. Multilingual semantic mapping via Bhashini
-8. Citation-first response delivery
+### 1️⃣ Legal Text Ingestion
+- Source: Official India Code repository  
+- Structured parsing: Act → Chapter → Section → Clause  
 
-This ensures every answer is traceable to official statutory law.
+### 2️⃣ Knowledge Graph Construction
+- Entity extraction: definitions, rights, penalties, remedies  
+- Graph database: Neo4j  
+- Section-level node indexing  
+- Explicit relationship modeling (e.g., defines, penalizes, remedies)
+
+### 3️⃣ Query Processing Pipeline
+- Natural language query input  
+- Graph-based deterministic retrieval  
+- Section-level verification  
+- Constrained LLM explanation  
+- Citation-first structured output  
+
+### 4️⃣ Multilingual Layer
+- Integrated via Bhashini API  
+- Semantic mapping prior to retrieval  
 
 ---
 
-## 📊 Evaluation Results
+## 📊 Evaluation (Preliminary)
 
-* **Total Queries Tested:** 15
-* **Success Rate:** 100%
-* **Section Accuracy:** 100%
-* **Hallucination Incidents:** 0
-* **Average Response Time:** ~2.49s (paper evaluation)
-* **Average Confidence Score:** 0.90
+### Evaluation Setup
+- Total queries tested: 15  
+- Queries manually constructed to cover rights, remedies, penalties, and definitions  
+- Ground truth validated against official statutory text  
 
-Nyayamrit achieved zero hallucination by strictly constraining reasoning to the Legal Knowledge Graph.
+### Results
+- Section-level retrieval accuracy: 15/15  
+- No hallucinated sections observed within test set  
+- Average response latency: ~2.49 seconds  
+- Average confidence score: 0.90  
+
+> Note: Results are preliminary and based on a limited evaluation set.  
+> Larger-scale benchmarking and adversarial testing remain future work.
 
 ---
 
 ## 🔍 Features
 
 ### For Citizens
+- Plain English and Hindi queries  
+- Citation-first statutory references  
+- Simplified explanation of legal rights  
 
-* Ask questions in plain English or Hindi
-* Retrieve exact statutory sections with citations
-* Understand rights and remedies in simple language
-* Get guidance for real-world issues:
-
-  * Defective goods
-  * Misleading advertisements
-  * Overcharging
-  * Deficiency in service
+Example use cases:
+- Defective goods  
+- Misleading advertisements  
+- Overcharging  
+- Deficiency in service  
 
 ### For Legal & Academic Use
-
-* Rapid statutory verification
-* Teaching and research support
-* Explainable AI benchmark for legal reasoning
-
----
-
-## 🧠 Core Technical Stack
-
-* Python + FastAPI
-* Neo4j (Legal Knowledge Graph)
-* LangChain (Reasoning Orchestration)
-* Open-source LLMs (explanation only)
-* Bhashini API (multilingual processing)
-* PostgreSQL (audit logs)
-* AMD-based cloud infrastructure
+- Rapid statutory verification  
+- Explainable AI case study  
+- Benchmark framework for graph-constrained legal reasoning  
 
 ---
 
-## 🛡 Why Nyayamrit is Different
+## 🧠 Technical Stack
 
-| Feature            | Nyayamrit                   | Generic LLMs    |
-| ------------------ | --------------------------- | --------------- |
-| Reasoning Type     | Deterministic (Graph-Based) | Probabilistic   |
-| Hallucination Risk | None                        | High            |
-| Citation Accuracy  | Exact Section-Level         | Often Incorrect |
-| Explainability     | Fully Traceable             | Limited         |
-| Legal Reliability  | Statute-Verified            | Not Guaranteed  |
-
-Nyayamrit functions as **“Legal First Aid”** — bridging the gap between hallucination-prone AI and inaccessible professional legal services.
+- Python + FastAPI  
+- Neo4j (Legal Knowledge Graph)  
+- LangChain (Pipeline orchestration)  
+- Open-source LLMs (explanation layer only)  
+- Bhashini API (multilingual processing)  
+- PostgreSQL (audit logging)  
+- AMD-based cloud infrastructure  
 
 ---
 
-## 🌍 Impact
+## 🛡 Design Philosophy
 
-* Democratizes access to consumer law
-* Reduces misinformation risk in legal AI
-* Saves time and legal consultation costs
-* Supports legal aid clinics and NGOs
-* Provides a scalable foundation for public legal infrastructure
+| Component | Nyayamrit |
+|------------|------------|
+| Retrieval | Deterministic graph traversal |
+| Explanation | Constrained generation |
+| Citation | Section-level grounding |
+| Hallucination Mitigation | Graph-first architecture |
+| Traceability | Fully verifiable reasoning path |
+
+Nyayamrit prioritizes **legal reliability over generative flexibility**.
 
 ---
 
-## 🚀 Future Roadmap
+## ⚠ Limitations
 
-* Integration with E-Daakhil and grievance portals
-* Expansion to additional Indian laws (BNS, BNSS, IT Act)
-* Constitution integration
-* Complaint drafting assistance
-* Nationwide scalable deployment
+- Evaluation dataset currently small (n=15 queries)  
+- Limited to Consumer Protection Act, 2019  
+- No adversarial robustness testing conducted yet  
+- Multilingual support depends on translation quality  
+- Provides legal information, not legal advice  
+
+---
+
+## 🚀 Future Work
+
+- Expansion to additional statutes (BNS, BNSS, IT Act, Constitution)  
+- Integration with E-Daakhil portal  
+- Complaint drafting assistance module  
+- Large-scale benchmarking and stress testing  
+- Adversarial hallucination evaluation  
+- Formal comparison against generic LLM systems  
 
 ---
 
 ## 👩‍💻 Author
 
-**Meher Soni**
-Birla Institute of Technology Mesra, Jaipur
-📧 [mehersoni06@gmail.com](mailto:mehersoni06@gmail.com)
+**Meher Soni**  
+Birla Institute of Technology Mesra, Jaipur  
+📧 mehersoni06@gmail.com  
 
-Mentor:
-**Dr. Piyush Gupta**
-Birla Institute of Technology Mesra, Jaipur
+**Mentor:** Dr. Piyush Gupta  
+Birla Institute of Technology Mesra, Jaipur  
 
 ---
 
 ## 📜 License
 
-This project is intended for academic and research purposes.
+This project is intended for academic and research purposes.  
 It provides legal information, not legal advice.
