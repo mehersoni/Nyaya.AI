@@ -1,97 +1,94 @@
-# Requirements Document: AWS Cloud Integration (Core 6-Layer Implementation)
+# Requirements Document: AWS Hackathon Integration
 
 ## Introduction
 
-This document specifies requirements for integrating the Nyayamrit GraphRAG-based Judicial Assistant system with AWS cloud services. The integration focuses on **6 core AWS layers** for immediate implementation, with additional enterprise features documented in the "Future Enterprise Roadmap" section.
+This document specifies requirements for integrating the Nyayamrit GraphRAG-based Judicial Assistant system with AWS cloud services **for a hackathon demo**. The focus is on building a working AWS deployment quickly, not enterprise production readiness.
 
-The system currently consists of 133 files including web interface, knowledge graph storage, LLM integration, and query engine. This AWS integration will replace local infrastructure with managed AWS services while preserving all existing functionality.
+The system currently consists of 133 files including web interface, knowledge graph storage, LLM integration, and query engine. This AWS integration will demonstrate cloud-native architecture using 6 core AWS services.
 
-## Implementation Strategy
+## Hackathon Goals
 
-**CORE IMPLEMENTATION (Build Now)**:
-1. Amazon Bedrock - LLM provider (Claude 3 Sonnet/Haiku)
-2. Amazon Neptune - Graph database (or keep existing Neo4j if simpler)
-3. AWS Lambda + API Gateway - Serverless compute and API management
-4. Amazon S3 - Legal document storage
-5. Amazon DynamoDB - Audit logs and session data
-6. AWS Cognito - User authentication
+**PRIMARY GOAL**: Demonstrate Nyayamrit running on AWS with core functionality intact
 
-**FUTURE ENTERPRISE ROADMAP (Document Only)**:
-- ElastiCache, RDS, CloudFront, ECS Fargate, EventBridge, WAF, Secrets Manager, CloudWatch advanced features, CloudTrail, X-Ray, etc.
+**SUCCESS CRITERIA**:
+- ✅ System runs on AWS (not localhost)
+- ✅ Uses AWS Bedrock for LLM (not OpenAI/Gemini)
+- ✅ Stores data in AWS (S3, DynamoDB, Neptune/Neo4j)
+- ✅ Accessible via public URL
+- ✅ Zero-hallucination guarantee maintained
+- ✅ Demo-ready in 2-3 days
 
-This pragmatic approach delivers a functional AWS deployment without overcomplicating the architecture.
+**NOT REQUIRED FOR HACKATHON**:
+- ❌ Load testing (10k users, chaos engineering, etc.)
+- ❌ Enterprise security (GuardDuty, AWS Config, WAF)
+- ❌ SLA measurements (99.9% uptime tracking)
+- ❌ Cost optimization (Reserved Instances, Savings Plans)
+- ❌ Advanced testing (80% code coverage, property-based tests)
+- ❌ Disaster recovery drills
+- ❌ Well-Architected Framework reviews
+- ❌ SDK generation, developer portals
+- ❌ Multi-region deployment
 
-## Glossary
+## Core AWS Stack (6 Services)
 
-- **Nyayamrit_System**: The complete GraphRAG-based Judicial Assistant application including web interface, knowledge graph, query engine, and LLM integration
-- **GraphRAG_Engine**: The graph-based retrieval augmented generation component that traverses the knowledge graph to build context
-- **Knowledge_Graph**: The graph database storing legal provisions, sections, clauses, definitions, and their relationships
-- **Query_Engine**: The component that parses user queries and orchestrates graph traversal
-- **LLM_Manager**: The component that interfaces with language model providers
-- **Confidence_Scorer**: The component that validates LLM responses against retrieved context to prevent hallucinations
-- **Web_Interface**: The Flask-based backend and React-based frontend for user interaction
-- **Legal_Document**: PDF files containing Indian legal acts and provisions
-- **Provision**: A specific legal rule or regulation within a Legal_Document
-- **User_Role**: One of three roles - Citizen, Lawyer, or Judge
-- **API_Gateway**: AWS service for managing RESTful API endpoints
-- **Bedrock**: AWS managed service for foundation models (Claude, Titan)
-- **Neptune**: AWS managed graph database service
-- **Lambda_Function**: AWS serverless compute function
-- **S3_Bucket**: AWS object storage service
-- **ElastiCache_Cluster**: AWS managed Redis caching service
-- **RDS_Instance**: AWS managed PostgreSQL database
-- **Cognito_User_Pool**: AWS service for user authentication and authorization
-- **CloudWatch**: AWS monitoring and logging service
-- **CloudTrail**: AWS audit logging service
-- **WAF**: AWS Web Application Firewall
-- **Secrets_Manager**: AWS service for secure credential storage
-- **CloudFront_Distribution**: AWS content delivery network
-- **ECS_Cluster**: AWS container orchestration service using Fargate
-- **EventBridge**: AWS event-driven integration service
-- **Migration_Phase**: One of three phases - Preparation, Parallel Operation, or Cutover
-- **Audit_Log**: Immutable record of system actions for compliance
-- **Response_Time**: Time from API request to response completion measured at p95 percentile
-- **Uptime**: Percentage of time the system is operational and accessible
-- **Concurrent_User**: A user actively making requests to the system within a 1-minute window
+1. **AWS Bedrock** - Claude 3 Haiku (fast + cheap for demo)
+2. **Amazon Neptune OR Neo4j** - Keep existing if easier
+3. **AWS Lambda + API Gateway** - Single Lambda function
+4. **Amazon S3** - PDF storage with versioning
+5. **Amazon DynamoDB** - Audit logs (simple, serverless)
+6. **AWS Cognito** - Basic auth (optional for demo)
 
-## Core Requirements (Implement Now)
+## Glossary (Hackathon Simplified)
 
-### Requirement 1: AWS Bedrock LLM Integration (MANDATORY)
+- **Bedrock**: AWS managed LLM service (Claude 3 Haiku)
+- **Lambda**: Serverless function (runs query pipeline)
+- **API_Gateway**: REST API endpoint (public URL)
+- **S3**: Object storage (PDF files)
+- **DynamoDB**: NoSQL database (audit logs)
+- **Neptune**: Graph database (legal provisions) - OR keep existing Neo4j
+- **Cognito**: User authentication (optional for demo)
+- **CloudWatch**: Basic logging (included with Lambda)
 
-**User Story:** As a system administrator, I want to integrate AWS Bedrock for LLM services, so that the system uses native AWS infrastructure with regional data residency compliance.
+## Hackathon Requirements (Build These)
 
-#### Acceptance Criteria
+### Requirement 1: AWS Bedrock Integration
 
-1. THE LLM_Manager SHALL support AWS Bedrock as a provider option
-2. WHEN AWS Bedrock is configured, THE LLM_Manager SHALL use Claude 3 Sonnet as the default model
-3. THE LLM_Manager SHALL support AWS Bedrock Titan models as an alternative option
-4. WHEN making LLM requests, THE LLM_Manager SHALL use AWS SDK authentication with IAM roles
-5. THE LLM_Manager SHALL maintain the existing provider interface for backward compatibility
-6. WHEN Bedrock API calls fail, THE LLM_Manager SHALL retry with exponential backoff up to 3 attempts
-7. THE LLM_Manager SHALL log all Bedrock API calls to CloudWatch with request metadata
-8. WHEN switching between LLM providers, THE Confidence_Scorer SHALL produce equivalent validation results
-9. THE LLM_Manager SHALL support streaming responses from Bedrock models
-10. FOR ALL valid queries, processing with Bedrock SHALL produce responses equivalent to current providers (metamorphic property)
+**Goal**: Replace Gemini/OpenAI with AWS Bedrock
 
-### Requirement 2: Amazon Neptune Knowledge Graph Migration (OR Keep Existing Neo4j)
+**Why**: Show AWS-native LLM integration
 
-**User Story:** As a developer, I want to migrate the knowledge graph from JSON files to Amazon Neptune (or keep existing Neo4j for simplicity), so that the system can scale to handle larger legal document collections with better query performance.
+#### Acceptance Criteria (Simplified)
 
-**Implementation Note**: If time is limited, keep the existing Neo4j/JSON implementation. Neptune is preferred for AWS purity but not mandatory for core functionality.
+1. Create BedrockProvider class in `llm_integration/providers.py`
+2. Use Claude 3 Haiku model (anthropic.claude-3-haiku-20240307-v1:0)
+3. Use boto3 SDK with IAM role authentication
+4. Implement simple retry logic (3 attempts with 1s delay)
+5. Log requests to CloudWatch (automatic with Lambda)
+6. Maintain existing prompt templates
+7. Test with sample query: "What are my consumer rights?"
+8. Verify zero-hallucination guarantee still works
 
-#### Acceptance Criteria
+### Requirement 2: Graph Database (Keep It Simple)
 
-1. THE Knowledge_Graph SHALL store all nodes and edges in Amazon Neptune using Gremlin API
-2. WHEN the system starts, THE Knowledge_Graph SHALL connect to Neptune using IAM database authentication
-3. THE Knowledge_Graph SHALL support all existing node types: sections, clauses, definitions, and rights
-4. THE Knowledge_Graph SHALL support all existing edge types: contains, contains_clause, defines, and grants_right
-5. WHEN migrating from JSON, THE Knowledge_Graph SHALL preserve all node properties and relationships
-6. THE Knowledge_Graph SHALL maintain existing query interfaces for backward compatibility
-7. WHEN traversing the graph, THE Query_Engine SHALL use Gremlin queries instead of JSON traversal
-8. THE Knowledge_Graph SHALL enable automatic backups with 7-day retention
-9. THE Knowledge_Graph SHALL support point-in-time recovery within the backup retention period
-10. WHEN querying Neptune, THE GraphRAG_Engine SHALL achieve response times under 50ms for single-hop traversals
-11. FOR ALL valid graph queries, Neptune results SHALL match JSON-based results (round-trip property)
+**Goal**: Store knowledge graph in AWS
+
+**Decision**: Keep existing JSON files OR use Neptune if you want AWS purity
+
+#### Option A: Keep JSON Files (RECOMMENDED FOR HACKATHON)
+
+1. Upload JSON files to S3
+2. Lambda loads them at startup
+3. In-memory graph traversal (existing code)
+4. Zero migration effort
+
+#### Option B: Amazon Neptune (If You Want Full AWS)
+
+1. Create Neptune cluster (db.t3.medium)
+2. Load existing graph data using Gremlin
+3. Update graph_traversal.py to use Gremlin queries
+4. Test basic traversal works
+
+**Recommendation**: Use Option A for hackathon speed
 
 ### Requirement 3: AWS Lambda + API Gateway (Single Lambda Architecture)
 
@@ -113,61 +110,58 @@ This pragmatic approach delivers a functional AWS deployment without overcomplic
 10. WHEN concurrent requests exceed 100, THE Lambda_Function SHALL auto-scale to handle the load
 11. THE Lambda_Function SHALL maintain warm instances to reduce cold start latency below 2 seconds
 
-### Requirement 4: Amazon S3 Document Storage
+### Requirement 4: S3 Document Storage
 
-**User Story:** As a legal content manager, I want to store PDF legal documents in S3, so that documents are versioned, backed up, and accessible through CDN.
+**Goal**: Store PDF files in S3
 
-#### Acceptance Criteria
+**Why**: Durable storage, versioning, public access
 
-1. THE Nyayamrit_System SHALL store all Legal_Document files in an S3_Bucket
-2. THE S3_Bucket SHALL enable versioning for all Legal_Document objects
-3. THE S3_Bucket SHALL encrypt all objects at rest using AWS KMS
-4. THE S3_Bucket SHALL enforce encryption in transit using HTTPS
-5. WHEN a Legal_Document is uploaded, THE S3_Bucket SHALL generate a unique version identifier
-6. THE S3_Bucket SHALL apply lifecycle policies to transition old versions to Glacier after 90 days
-7. THE S3_Bucket SHALL integrate with CloudFront_Distribution for global content delivery
-8. WHEN a Legal_Document is requested, THE CloudFront_Distribution SHALL serve it from edge cache if available
-9. THE S3_Bucket SHALL enable access logging to track document retrieval
-10. THE S3_Bucket SHALL support cross-region replication for disaster recovery
-11. FOR ALL uploaded documents, downloading and re-uploading SHALL preserve content integrity (round-trip property)
+#### Acceptance Criteria (Simplified)
 
-### Requirement 5: Amazon DynamoDB for Audit Logs and Sessions
+1. Create S3 bucket (nyayamrit-legal-docs-{random})
+2. Enable versioning
+3. Upload consumer_protection_act_2019.pdf
+4. Upload knowledge graph JSON files
+5. Set bucket policy for Lambda read access
+6. Test Lambda can download files
+7. Optional: Enable public read for demo purposes
 
-**User Story:** As a database administrator, I want to use DynamoDB for audit logs and session data, so that the system has serverless, scalable data storage without managing database servers.
+**Skip for hackathon**: KMS encryption, lifecycle policies, CloudFront, cross-region replication
 
-**Architecture Decision**: Use **DynamoDB instead of RDS** for simplicity. DynamoDB provides serverless scalability, automatic backups, and pay-per-use pricing without the complexity of managing RDS instances.
+### Requirement 5: DynamoDB Audit Logs
 
-#### Acceptance Criteria
+**Goal**: Log queries for demo purposes
 
-1. THE Nyayamrit_System SHALL use DynamoDB tables for audit logs and session data
-2. THE DynamoDB SHALL have two tables: AuditLogs and UserSessions
-3. THE AuditLogs table SHALL use query_id as partition key and timestamp as sort key
-4. THE UserSessions table SHALL use user_id as partition key with TTL enabled
-5. THE DynamoDB SHALL enable point-in-time recovery for both tables
-6. THE DynamoDB SHALL encrypt data at rest using AWS managed keys
-7. WHEN a user action occurs, THE Nyayamrit_System SHALL write an Audit_Log entry to DynamoDB
-8. THE DynamoDB SHALL enable on-demand billing for automatic scaling
-9. THE DynamoDB SHALL support at least 1,000 write requests per second
-10. THE DynamoDB SHALL enable DynamoDB Streams for real-time event processing (future use)
-11. THE UserSessions table SHALL automatically delete expired sessions using TTL attribute
+**Why**: Serverless, simple, no database management
 
-### Requirement 6: AWS Cognito User Authentication
+#### Acceptance Criteria (Simplified)
 
-**User Story:** As a security administrator, I want to use AWS Cognito for user authentication, so that the system has secure, scalable identity management with role-based access control.
+1. Create DynamoDB table: QueryLogs
+2. Partition key: query_id (string)
+3. Sort key: timestamp (number)
+4. Attributes: user_query, response, confidence_score
+5. Use on-demand billing
+6. Lambda writes log after each query
+7. Test: Query DynamoDB to see logs
+8. Optional: Display recent queries in web UI
 
-#### Acceptance Criteria
+**Skip for hackathon**: Point-in-time recovery, DynamoDB Streams, TTL, user sessions
 
-1. THE Nyayamrit_System SHALL use a Cognito_User_Pool for user authentication
-2. THE Cognito_User_Pool SHALL support three User_Role types: Citizen, Lawyer, and Judge
-3. WHEN a user registers, THE Cognito_User_Pool SHALL require email verification
-4. WHEN a user logs in, THE Cognito_User_Pool SHALL issue JWT tokens with 1-hour expiration
-5. THE Cognito_User_Pool SHALL enforce password complexity: minimum 8 characters, uppercase, lowercase, number, and special character
-6. WHERE a user has Judge or Lawyer role, THE Cognito_User_Pool SHALL require multi-factor authentication
-7. THE Cognito_User_Pool SHALL support social identity providers: Google and Microsoft
-8. WHEN authentication fails 5 times, THE Cognito_User_Pool SHALL lock the account for 15 minutes
-9. THE Cognito_User_Pool SHALL integrate with API_Gateway for request authorization
-10. WHEN a JWT token expires, THE Web_Interface SHALL refresh it automatically using refresh tokens
-11. THE Cognito_User_Pool SHALL log all authentication events to CloudWatch
+### Requirement 6: Cognito Authentication (OPTIONAL)
+
+**Goal**: Add basic user authentication
+
+**Why**: Show AWS auth integration (but not critical for demo)
+
+#### Acceptance Criteria (Simplified)
+
+1. Create Cognito User Pool
+2. Create test user account
+3. Add login page to web interface
+4. API Gateway validates JWT tokens
+5. Test: Login and make authenticated query
+
+**Recommendation**: SKIP for hackathon unless you have extra time. Open API is fine for demo.
 
 ## Future Enterprise Roadmap (Document Only - Not Implemented Now)
 
@@ -373,40 +367,43 @@ The following requirements are documented for future enterprise deployment but a
 
 ## Core Requirements Summary (Implement Now)
 
-### Requirement 7: System Performance and Scalability
+### Requirement 7: Basic Testing
 
-**User Story:** As a product manager, I want the system to meet performance SLAs, so that users experience fast, reliable service at scale.
+**Goal**: Verify system works on AWS
 
-#### Acceptance Criteria
+**Why**: Confidence for demo
 
-1. THE Nyayamrit_System SHALL achieve 99.9% Uptime measured monthly
-2. THE API_Gateway SHALL respond to query requests within 100ms at p95 percentile
-3. THE Nyayamrit_System SHALL support at least 10,000 Concurrent_User sessions
-4. WHEN load increases, THE Nyayamrit_System SHALL auto-scale to maintain Response_Time SLA
-5. THE GraphRAG_Engine SHALL process queries within 50ms for cached results
-6. THE GraphRAG_Engine SHALL process queries within 500ms for uncached results
-7. THE Knowledge_Graph SHALL support graphs with at least 1 million nodes
-8. THE Knowledge_Graph SHALL support graphs with at least 5 million edges
-9. WHEN system load exceeds capacity, THE API_Gateway SHALL return HTTP 503 with retry-after header
-10. THE Nyayamrit_System SHALL maintain Response_Time SLA during deployment updates
+#### Acceptance Criteria (Simplified)
 
-### Requirement 8: Data Security and Compliance
+1. Test query: "What are my consumer rights?"
+2. Verify response includes all 6 rights
+3. Verify citations are correct
+4. Verify confidence score > 0.8
+5. Test 5-10 different queries
+6. Verify zero hallucinations
+7. Check CloudWatch logs show requests
+8. Check DynamoDB has query logs
+9. Measure response time (should be < 5 seconds)
+10. Test from web interface
 
-**User Story:** As a compliance officer, I want comprehensive security controls, so that the system complies with Indian data protection laws and industry standards.
+**Skip for hackathon**: Load testing, 10k users, chaos engineering, 1M nodes, p95 latency tracking
 
-#### Acceptance Criteria
+### Requirement 8: Basic Security
 
-1. THE Nyayamrit_System SHALL encrypt all data at rest using AWS KMS with customer-managed keys
-2. THE Nyayamrit_System SHALL encrypt all data in transit using TLS 1.2 or higher
-3. THE Nyayamrit_System SHALL store all user data within AWS Asia Pacific (Mumbai) region
-4. THE Nyayamrit_System SHALL enable VPC endpoints for all AWS service communication
-5. THE Nyayamrit_System SHALL implement network isolation using VPC security groups
-6. THE Nyayamrit_System SHALL enforce least-privilege IAM policies for all components
-7. THE Nyayamrit_System SHALL enable AWS Config for compliance monitoring
-8. THE Nyayamrit_System SHALL pass AWS Well-Architected Framework security pillar review
-9. WHEN sensitive data is logged, THE Nyayamrit_System SHALL mask or redact it
-10. THE Nyayamrit_System SHALL enable AWS GuardDuty for threat detection
-11. THE Nyayamrit_System SHALL conduct quarterly security assessments and penetration testing
+**Goal**: Use AWS best practices
+
+**Why**: Show security awareness
+
+#### Acceptance Criteria (Simplified)
+
+1. Use IAM roles (not access keys)
+2. Deploy in ap-south-1 (Mumbai) region
+3. Use HTTPS for API Gateway
+4. Set least-privilege IAM policies
+5. Enable CloudWatch logging
+6. Don't log sensitive data
+
+**Skip for hackathon**: KMS encryption, VPC endpoints, AWS Config, GuardDuty, Well-Architected review, penetration testing
 
 ### Requirement 9: Simplified Disaster Recovery
 
