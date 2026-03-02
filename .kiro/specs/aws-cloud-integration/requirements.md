@@ -1,10 +1,25 @@
-# Requirements Document: AWS Cloud Integration
+# Requirements Document: AWS Cloud Integration (Core 6-Layer Implementation)
 
 ## Introduction
 
-This document specifies requirements for integrating the Nyayamrit GraphRAG-based Judicial Assistant system with AWS cloud services. The integration will transform the locally-deployed system into a production-grade, scalable, secure, and reliable cloud-native application while maintaining the existing GraphRAG architecture and zero-hallucination guarantee.
+This document specifies requirements for integrating the Nyayamrit GraphRAG-based Judicial Assistant system with AWS cloud services. The integration focuses on **6 core AWS layers** for immediate implementation, with additional enterprise features documented in the "Future Enterprise Roadmap" section.
 
 The system currently consists of 133 files including web interface, knowledge graph storage, LLM integration, and query engine. This AWS integration will replace local infrastructure with managed AWS services while preserving all existing functionality.
+
+## Implementation Strategy
+
+**CORE IMPLEMENTATION (Build Now)**:
+1. Amazon Bedrock - LLM provider (Claude 3 Sonnet/Haiku)
+2. Amazon Neptune - Graph database (or keep existing Neo4j if simpler)
+3. AWS Lambda + API Gateway - Serverless compute and API management
+4. Amazon S3 - Legal document storage
+5. Amazon DynamoDB - Audit logs and session data
+6. AWS Cognito - User authentication
+
+**FUTURE ENTERPRISE ROADMAP (Document Only)**:
+- ElastiCache, RDS, CloudFront, ECS Fargate, EventBridge, WAF, Secrets Manager, CloudWatch advanced features, CloudTrail, X-Ray, etc.
+
+This pragmatic approach delivers a functional AWS deployment without overcomplicating the architecture.
 
 ## Glossary
 
@@ -39,9 +54,9 @@ The system currently consists of 133 files including web interface, knowledge gr
 - **Uptime**: Percentage of time the system is operational and accessible
 - **Concurrent_User**: A user actively making requests to the system within a 1-minute window
 
-## Requirements
+## Core Requirements (Implement Now)
 
-### Requirement 1: AWS Bedrock LLM Integration
+### Requirement 1: AWS Bedrock LLM Integration (MANDATORY)
 
 **User Story:** As a system administrator, I want to integrate AWS Bedrock for LLM services, so that the system uses native AWS infrastructure with regional data residency compliance.
 
@@ -58,9 +73,11 @@ The system currently consists of 133 files including web interface, knowledge gr
 9. THE LLM_Manager SHALL support streaming responses from Bedrock models
 10. FOR ALL valid queries, processing with Bedrock SHALL produce responses equivalent to current providers (metamorphic property)
 
-### Requirement 2: Amazon Neptune Knowledge Graph Migration
+### Requirement 2: Amazon Neptune Knowledge Graph Migration (OR Keep Existing Neo4j)
 
-**User Story:** As a developer, I want to migrate the knowledge graph from JSON files to Amazon Neptune, so that the system can scale to handle larger legal document collections with better query performance.
+**User Story:** As a developer, I want to migrate the knowledge graph from JSON files to Amazon Neptune (or keep existing Neo4j for simplicity), so that the system can scale to handle larger legal document collections with better query performance.
+
+**Implementation Note**: If time is limited, keep the existing Neo4j/JSON implementation. Neptune is preferred for AWS purity but not mandatory for core functionality.
 
 #### Acceptance Criteria
 
@@ -76,23 +93,25 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. WHEN querying Neptune, THE GraphRAG_Engine SHALL achieve response times under 50ms for single-hop traversals
 11. FOR ALL valid graph queries, Neptune results SHALL match JSON-based results (round-trip property)
 
-### Requirement 3: AWS Lambda Serverless Query Processing
+### Requirement 3: AWS Lambda + API Gateway (Single Lambda Architecture)
 
-**User Story:** As a system architect, I want to deploy query processing as Lambda functions, so that the system automatically scales based on demand and reduces operational costs.
+**User Story:** As a system architect, I want to deploy query processing as a single Lambda function with API Gateway, so that the system automatically scales based on demand with minimal complexity.
+
+**Architecture Decision**: Use a **single Lambda function** for the entire query pipeline (query parsing → graph traversal → LLM → validation → response). This simplifies deployment and reduces cold start issues.
 
 #### Acceptance Criteria
 
-1. THE Query_Engine SHALL execute as a Lambda_Function triggered by API_Gateway requests
-2. THE GraphRAG_Engine SHALL execute as a Lambda_Function invoked by the Query_Engine
-3. THE Confidence_Scorer SHALL execute as a Lambda_Function invoked by the GraphRAG_Engine
-4. WHEN a query request arrives, THE API_Gateway SHALL invoke the Query_Engine Lambda_Function
-5. THE Lambda_Function SHALL have a timeout of 30 seconds for query processing
-6. THE Lambda_Function SHALL have memory allocation of 2048 MB for graph operations
-7. WHEN Lambda_Function execution fails, THE API_Gateway SHALL return a 500 error with error details
-8. THE Lambda_Function SHALL use environment variables from Secrets_Manager for configuration
-9. THE Lambda_Function SHALL log all executions to CloudWatch with query metadata
+1. THE Nyayamrit_System SHALL deploy a single Lambda_Function containing the complete query pipeline
+2. THE API_Gateway SHALL trigger the Lambda_Function for all /query endpoint requests
+3. THE Lambda_Function SHALL have a timeout of 30 seconds for query processing
+4. THE Lambda_Function SHALL have memory allocation of 2048 MB for graph operations
+5. WHEN Lambda_Function execution fails, THE API_Gateway SHALL return a 500 error with error details
+6. THE Lambda_Function SHALL use environment variables for AWS service configuration
+7. THE Lambda_Function SHALL log all executions to CloudWatch with query metadata
+8. THE API_Gateway SHALL enforce rate limiting of 100 requests per minute per user
+9. THE API_Gateway SHALL validate JWT tokens from Cognito_User_Pool for protected endpoints
 10. WHEN concurrent requests exceed 100, THE Lambda_Function SHALL auto-scale to handle the load
-11. THE Lambda_Function SHALL maintain warm instances to reduce cold start latency below 1 second
+11. THE Lambda_Function SHALL maintain warm instances to reduce cold start latency below 2 seconds
 
 ### Requirement 4: Amazon S3 Document Storage
 
@@ -112,44 +131,27 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. THE S3_Bucket SHALL support cross-region replication for disaster recovery
 11. FOR ALL uploaded documents, downloading and re-uploading SHALL preserve content integrity (round-trip property)
 
-### Requirement 5: Amazon ElastiCache Redis Caching Layer
+### Requirement 5: Amazon DynamoDB for Audit Logs and Sessions
 
-**User Story:** As a performance engineer, I want to implement Redis caching for frequently accessed provisions, so that repeated queries achieve sub-millisecond response times.
+**User Story:** As a database administrator, I want to use DynamoDB for audit logs and session data, so that the system has serverless, scalable data storage without managing database servers.
 
-#### Acceptance Criteria
-
-1. THE Nyayamrit_System SHALL use an ElastiCache_Cluster for caching query results
-2. THE ElastiCache_Cluster SHALL use Redis 7.0 or later
-3. THE ElastiCache_Cluster SHALL enable cluster mode for horizontal scalability
-4. THE ElastiCache_Cluster SHALL enable automatic failover with Multi-AZ deployment
-5. WHEN a query is processed, THE Query_Engine SHALL check ElastiCache_Cluster before querying Neptune
-6. WHEN a cache hit occurs, THE Query_Engine SHALL return results within 10ms
-7. WHEN a cache miss occurs, THE Query_Engine SHALL store results in ElastiCache_Cluster with 1-hour TTL
-8. THE ElastiCache_Cluster SHALL encrypt data in transit using TLS
-9. THE ElastiCache_Cluster SHALL encrypt data at rest using AWS KMS
-10. WHEN the Knowledge_Graph is updated, THE Nyayamrit_System SHALL invalidate related cache entries
-11. THE ElastiCache_Cluster SHALL support at least 10,000 operations per second
-12. WHEN applying cache operations twice, THE result SHALL be identical to applying once (idempotence property)
-
-### Requirement 6: Amazon RDS PostgreSQL Database
-
-**User Story:** As a database administrator, I want to use RDS PostgreSQL for user data and audit logs, so that the system has reliable, backed-up relational data storage.
+**Architecture Decision**: Use **DynamoDB instead of RDS** for simplicity. DynamoDB provides serverless scalability, automatic backups, and pay-per-use pricing without the complexity of managing RDS instances.
 
 #### Acceptance Criteria
 
-1. THE Nyayamrit_System SHALL use an RDS_Instance running PostgreSQL 15 or later
-2. THE RDS_Instance SHALL enable Multi-AZ deployment for high availability
-3. THE RDS_Instance SHALL enable automated backups with 30-day retention
-4. THE RDS_Instance SHALL encrypt data at rest using AWS KMS
-5. THE RDS_Instance SHALL encrypt data in transit using SSL/TLS
-6. THE RDS_Instance SHALL store user profiles, session data, and Audit_Log records
-7. WHEN a user action occurs, THE Nyayamrit_System SHALL write an Audit_Log entry to RDS_Instance
-8. THE RDS_Instance SHALL support point-in-time recovery within the backup retention period
-9. THE RDS_Instance SHALL enable Performance Insights for query monitoring
-10. WHEN RDS_Instance failover occurs, THE Nyayamrit_System SHALL reconnect automatically within 30 seconds
-11. THE RDS_Instance SHALL support at least 1,000 concurrent database connections
+1. THE Nyayamrit_System SHALL use DynamoDB tables for audit logs and session data
+2. THE DynamoDB SHALL have two tables: AuditLogs and UserSessions
+3. THE AuditLogs table SHALL use query_id as partition key and timestamp as sort key
+4. THE UserSessions table SHALL use user_id as partition key with TTL enabled
+5. THE DynamoDB SHALL enable point-in-time recovery for both tables
+6. THE DynamoDB SHALL encrypt data at rest using AWS managed keys
+7. WHEN a user action occurs, THE Nyayamrit_System SHALL write an Audit_Log entry to DynamoDB
+8. THE DynamoDB SHALL enable on-demand billing for automatic scaling
+9. THE DynamoDB SHALL support at least 1,000 write requests per second
+10. THE DynamoDB SHALL enable DynamoDB Streams for real-time event processing (future use)
+11. THE UserSessions table SHALL automatically delete expired sessions using TTL attribute
 
-### Requirement 7: AWS Cognito User Authentication
+### Requirement 6: AWS Cognito User Authentication
 
 **User Story:** As a security administrator, I want to use AWS Cognito for user authentication, so that the system has secure, scalable identity management with role-based access control.
 
@@ -167,7 +169,31 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. WHEN a JWT token expires, THE Web_Interface SHALL refresh it automatically using refresh tokens
 11. THE Cognito_User_Pool SHALL log all authentication events to CloudWatch
 
-### Requirement 8: Amazon CloudWatch Monitoring and Logging
+## Future Enterprise Roadmap (Document Only - Not Implemented Now)
+
+The following requirements are documented for future enterprise deployment but are NOT part of the core 6-layer implementation. These can be added incrementally as the system scales.
+
+### Future Requirement 1: Amazon ElastiCache Redis Caching Layer
+
+**Status**: Future Enhancement  
+**Priority**: Medium  
+**Estimated Effort**: 2-3 weeks
+
+**User Story:** As a performance engineer, I want to implement Redis caching for frequently accessed provisions, so that repeated queries achieve sub-millisecond response times.
+
+**Implementation Note**: The current system can achieve acceptable performance without caching. Add ElastiCache when query volume exceeds 1,000 requests/minute or when p95 latency exceeds 200ms.
+
+### Future Requirement 2: Amazon RDS PostgreSQL Database
+
+**Status**: Future Enhancement  
+**Priority**: Low (DynamoDB sufficient for now)  
+**Estimated Effort**: 1-2 weeks
+
+**User Story:** As a database administrator, I want to use RDS PostgreSQL for complex relational queries, so that the system can support advanced analytics and reporting.
+
+**Implementation Note**: DynamoDB handles current needs. Consider RDS when complex JOIN queries or ACID transactions become necessary.
+
+### Future Requirement 3: Amazon CloudWatch Advanced Monitoring
 
 **User Story:** As a DevOps engineer, I want comprehensive CloudWatch monitoring, so that I can track system health, performance metrics, and troubleshoot issues.
 
@@ -185,7 +211,9 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. THE CloudWatch SHALL enable log insights queries for troubleshooting
 11. WHEN querying logs, THE CloudWatch SHALL support filtering by request ID, user ID, and timestamp
 
-### Requirement 9: AWS CloudTrail Audit Logging
+**Implementation Note**: Basic CloudWatch logging is included with Lambda. Advanced features (custom dashboards, detailed metrics, log insights) can be added later.
+
+### Future Requirement 4: AWS CloudTrail Audit Logging
 
 **User Story:** As a compliance officer, I want CloudTrail audit logging, so that all AWS API calls are recorded for security audits and compliance reporting.
 
@@ -203,7 +231,9 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. THE CloudTrail SHALL enable multi-region logging for complete coverage
 11. WHEN suspicious activity is detected, THE CloudTrail SHALL trigger CloudWatch alarms
 
-### Requirement 10: Amazon API Gateway Management
+**Implementation Note**: CloudTrail is included in core implementation for basic AWS API auditing. Advanced features (multi-region, data events, log file validation) are future enhancements.
+
+### Future Requirement 5: Amazon API Gateway Advanced Features
 
 **User Story:** As an API developer, I want API Gateway for RESTful API management, so that the system has rate limiting, authentication, and request transformation.
 
@@ -221,7 +251,9 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. WHEN API_Gateway receives invalid requests, THE API_Gateway SHALL return descriptive error messages
 11. THE API_Gateway SHALL enable caching for GET requests with 5-minute TTL
 
-### Requirement 11: AWS WAF Web Application Firewall
+**Implementation Note**: Basic API Gateway features (rate limiting, JWT validation, CORS) are in core implementation. Advanced features (request validation, caching, API versioning) are future enhancements.
+
+### Future Requirement 6: AWS WAF Web Application Firewall
 
 **User Story:** As a security engineer, I want AWS WAF protection, so that the system is protected from common web attacks and DDoS.
 
@@ -238,7 +270,9 @@ The system currently consists of 133 files including web interface, knowledge gr
 9. THE WAF SHALL allow custom rules for application-specific threats
 10. WHEN suspicious patterns are detected, THE WAF SHALL trigger CloudWatch alarms
 
-### Requirement 12: AWS Secrets Manager Credential Storage
+**Implementation Note**: WAF adds significant complexity and cost. Implement when facing actual security threats or DDoS attacks. API Gateway rate limiting provides basic protection.
+
+### Future Requirement 7: AWS Secrets Manager Credential Storage
 
 **User Story:** As a security administrator, I want Secrets Manager for credential storage, so that API keys and database passwords are securely managed with automatic rotation.
 
@@ -256,7 +290,9 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. THE Secrets_Manager SHALL enforce IAM policies for least-privilege access
 11. WHEN secrets are rotated, THE Nyayamrit_System SHALL use new credentials without downtime
 
-### Requirement 13: Amazon CloudFront Content Delivery
+**Implementation Note**: Use environment variables for now. Secrets Manager adds automatic rotation and centralized management but is not critical for initial deployment.
+
+### Future Requirement 8: Amazon CloudFront Content Delivery
 
 **User Story:** As a frontend developer, I want CloudFront CDN for static assets, so that users worldwide experience fast page load times.
 
@@ -274,7 +310,9 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. THE CloudFront_Distribution SHALL achieve cache hit ratio above 80%
 11. WHEN serving cached content, THE CloudFront_Distribution SHALL respond within 50ms
 
-### Requirement 14: AWS ECS Fargate Container Orchestration
+**Implementation Note**: CloudFront is valuable for global users but adds complexity. Implement when serving users outside India or when S3 direct access latency becomes an issue.
+
+### Future Requirement 9: AWS ECS Fargate Container Orchestration
 
 **User Story:** As a DevOps engineer, I want ECS Fargate for the web interface, so that the application runs in containers with auto-scaling and zero server management.
 
@@ -292,7 +330,9 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. THE ECS_Cluster SHALL use IAM roles for task execution and task permissions
 11. THE ECS_Cluster SHALL support rolling back to previous container versions
 
-### Requirement 15: Amazon EventBridge Event-Driven Integration
+**Implementation Note**: ECS Fargate is an alternative to Lambda for the web interface. Choose ONE compute pattern. Lambda is simpler for initial deployment.
+
+### Future Requirement 10: Amazon EventBridge Event-Driven Integration
 
 **User Story:** As a system architect, I want EventBridge for event-driven workflows, so that system components react to knowledge graph updates and scheduled tasks.
 
@@ -309,7 +349,31 @@ The system currently consists of 133 files including web interface, knowledge gr
 9. THE EventBridge SHALL support event filtering based on event attributes
 10. THE EventBridge SHALL enable cross-account event delivery for multi-environment setups
 
-### Requirement 16: System Performance and Scalability
+**Implementation Note**: EventBridge enables sophisticated event-driven workflows. Implement when building automated amendment tracking or complex multi-service orchestration.
+
+### Future Requirement 11: AWS X-Ray Distributed Tracing
+
+**Status**: Future Enhancement  
+**Priority**: Low  
+**Estimated Effort**: 1 week
+
+**User Story:** As a developer, I want X-Ray distributed tracing, so that I can debug performance issues across Lambda, API Gateway, and Neptune.
+
+**Implementation Note**: CloudWatch logs provide basic debugging. X-Ray adds detailed performance insights but is not critical for initial deployment.
+
+### Future Requirement 12: Amazon SQS for Async Processing
+
+**Status**: Future Enhancement  
+**Priority**: Medium  
+**Estimated Effort**: 1-2 weeks
+
+**User Story:** As a system architect, I want SQS for asynchronous processing, so that long-running tasks don't block API responses.
+
+**Implementation Note**: Implement when processing times exceed Lambda timeout (30s) or when building batch processing workflows.
+
+## Core Requirements Summary (Implement Now)
+
+### Requirement 7: System Performance and Scalability
 
 **User Story:** As a product manager, I want the system to meet performance SLAs, so that users experience fast, reliable service at scale.
 
@@ -326,7 +390,7 @@ The system currently consists of 133 files including web interface, knowledge gr
 9. WHEN system load exceeds capacity, THE API_Gateway SHALL return HTTP 503 with retry-after header
 10. THE Nyayamrit_System SHALL maintain Response_Time SLA during deployment updates
 
-### Requirement 17: Data Security and Compliance
+### Requirement 8: Data Security and Compliance
 
 **User Story:** As a compliance officer, I want comprehensive security controls, so that the system complies with Indian data protection laws and industry standards.
 
@@ -344,24 +408,26 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. THE Nyayamrit_System SHALL enable AWS GuardDuty for threat detection
 11. THE Nyayamrit_System SHALL conduct quarterly security assessments and penetration testing
 
-### Requirement 18: Disaster Recovery and Business Continuity
+### Requirement 9: Simplified Disaster Recovery
 
 **User Story:** As a system administrator, I want automated disaster recovery, so that the system can recover from failures with minimal data loss and downtime.
 
 #### Acceptance Criteria
 
-1. THE Nyayamrit_System SHALL achieve Recovery Point Objective (RPO) of 5 minutes
-2. THE Nyayamrit_System SHALL achieve Recovery Time Objective (RTO) of 1 hour
-3. THE Nyayamrit_System SHALL enable cross-region replication for S3_Bucket
-4. THE Nyayamrit_System SHALL enable cross-region read replicas for RDS_Instance
-5. THE Nyayamrit_System SHALL maintain disaster recovery runbooks in AWS Systems Manager
-6. THE Nyayamrit_System SHALL conduct quarterly disaster recovery drills
-7. WHEN a regional failure occurs, THE Nyayamrit_System SHALL failover to secondary region
-8. THE Nyayamrit_System SHALL enable automated backups for all stateful services
-9. THE Nyayamrit_System SHALL test backup restoration monthly
-10. THE Nyayamrit_System SHALL maintain infrastructure as code in version control for rapid redeployment
+1. THE Nyayamrit_System SHALL enable automated backups for S3_Bucket with versioning
+2. THE Nyayamrit_System SHALL enable point-in-time recovery for DynamoDB tables
+3. THE Nyayamrit_System SHALL enable automated backups for Neptune with 7-day retention
+4. THE Nyayamrit_System SHALL maintain infrastructure as code in version control for rapid redeployment
+5. THE Nyayamrit_System SHALL achieve Recovery Point Objective (RPO) of 1 hour
+6. THE Nyayamrit_System SHALL achieve Recovery Time Objective (RTO) of 4 hours
+7. WHEN a service failure occurs, THE Nyayamrit_System SHALL restore from latest backup
+8. THE Nyayamrit_System SHALL test backup restoration quarterly
+9. THE Nyayamrit_System SHALL document recovery procedures in README
+10. THE Nyayamrit_System SHALL enable AWS Backup for centralized backup management
 
-### Requirement 19: Cost Optimization and Resource Management
+**Implementation Note**: Cross-region replication and advanced DR features are future enhancements. Basic backups provide adequate protection for initial deployment.
+
+### Requirement 10: Cost Optimization and Resource Management
 
 **User Story:** As a financial controller, I want cost optimization controls, so that AWS spending is predictable and efficient.
 
@@ -378,7 +444,7 @@ The system currently consists of 133 files including web interface, knowledge gr
 9. THE Nyayamrit_System SHALL review and optimize costs quarterly
 10. THE Nyayamrit_System SHALL achieve at least 30% cost reduction compared to equivalent EC2-based deployment
 
-### Requirement 20: Migration Strategy and Backward Compatibility
+### Requirement 11: Migration Strategy and Backward Compatibility
 
 **User Story:** As a project manager, I want a phased migration approach, so that the system transitions to AWS without service disruption.
 
@@ -396,7 +462,7 @@ The system currently consists of 133 files including web interface, knowledge gr
 10. THE Nyayamrit_System SHALL enable rollback to local deployment within 1 hour if critical issues occur
 11. FOR ALL valid queries, AWS deployment SHALL produce results equivalent to local deployment (metamorphic property)
 
-### Requirement 21: Infrastructure as Code and DevOps
+### Requirement 12: Infrastructure as Code and DevOps
 
 **User Story:** As a DevOps engineer, I want infrastructure as code, so that AWS resources are version-controlled, reproducible, and auditable.
 
@@ -413,24 +479,26 @@ The system currently consists of 133 files including web interface, knowledge gr
 9. THE Nyayamrit_System SHALL document all manual infrastructure changes in change logs
 10. THE Nyayamrit_System SHALL support one-command deployment of complete infrastructure
 
-### Requirement 22: Observability and Debugging
+### Requirement 13: Basic Observability and Debugging
 
 **User Story:** As a developer, I want comprehensive observability, so that I can debug issues quickly and understand system behavior.
 
 #### Acceptance Criteria
 
-1. THE Nyayamrit_System SHALL implement distributed tracing using AWS X-Ray
-2. THE Nyayamrit_System SHALL trace requests across all Lambda_Function invocations
-3. THE Nyayamrit_System SHALL correlate logs using request IDs across all services
-4. WHEN an error occurs, THE Nyayamrit_System SHALL capture full stack traces and context
-5. THE Nyayamrit_System SHALL enable CloudWatch Logs Insights for log analysis
-6. THE Nyayamrit_System SHALL create service maps showing component dependencies
-7. THE Nyayamrit_System SHALL measure and report latency for each system component
-8. THE Nyayamrit_System SHALL enable real-time log streaming for debugging
-9. THE Nyayamrit_System SHALL support querying traces by user ID, query text, and timestamp
-10. THE Nyayamrit_System SHALL retain traces for 30 days for historical analysis
+1. THE Nyayamrit_System SHALL log all Lambda_Function executions to CloudWatch Logs
+2. THE Nyayamrit_System SHALL correlate logs using request IDs across all services
+3. WHEN an error occurs, THE Nyayamrit_System SHALL capture full stack traces and context
+4. THE Nyayamrit_System SHALL enable CloudWatch Logs for all AWS services
+5. THE Nyayamrit_System SHALL retain logs for 30 days
+6. THE Nyayamrit_System SHALL support querying logs by user ID, query text, and timestamp
+7. THE Nyayamrit_System SHALL measure and log latency for each query
+8. THE Nyayamrit_System SHALL log all API Gateway requests with response codes
+9. THE Nyayamrit_System SHALL enable Lambda function metrics (invocations, errors, duration)
+10. THE Nyayamrit_System SHALL create basic CloudWatch dashboard for key metrics
 
-### Requirement 23: API Documentation and Developer Experience
+**Implementation Note**: X-Ray distributed tracing and advanced observability features are future enhancements. Basic CloudWatch logging provides adequate debugging for initial deployment.
+
+### Requirement 14: API Documentation and Developer Experience
 
 **User Story:** As an API consumer, I want comprehensive API documentation, so that I can integrate with the system easily.
 
@@ -447,7 +515,7 @@ The system currently consists of 133 files including web interface, knowledge gr
 9. THE API_Gateway SHALL provide sandbox environment for testing without affecting production
 10. THE Nyayamrit_System SHALL publish API documentation to a public developer portal
 
-### Requirement 24: Testing and Quality Assurance
+### Requirement 15: Testing and Quality Assurance
 
 **User Story:** As a QA engineer, I want comprehensive testing in AWS environment, so that the system is validated before production deployment.
 
@@ -464,34 +532,58 @@ The system currently consists of 133 files including web interface, knowledge gr
 9. THE Nyayamrit_System SHALL achieve at least 80% code coverage for AWS integration code
 10. THE Nyayamrit_System SHALL perform regression testing for all existing features after AWS migration
 
-### Requirement 25: Legal Document Amendment Tracking
+### Requirement 16: Legal Document Amendment Tracking (Simplified)
 
 **User Story:** As a legal content manager, I want automated tracking of legal document amendments, so that the knowledge graph stays current with legislative changes.
 
 #### Acceptance Criteria
 
-1. THE Nyayamrit_System SHALL check for Legal_Document amendments daily using EventBridge scheduler
-2. WHEN a Legal_Document amendment is detected, THE Nyayamrit_System SHALL publish an event to EventBridge
-3. WHEN an amendment event occurs, THE Nyayamrit_System SHALL trigger Lambda_Function for document processing
-4. THE Nyayamrit_System SHALL store amendment history in RDS_Instance with timestamps
-5. THE Nyayamrit_System SHALL notify administrators of detected amendments via SNS
-6. THE Nyayamrit_System SHALL maintain both current and historical versions in S3_Bucket
-7. WHEN amendments are processed, THE Nyayamrit_System SHALL update Knowledge_Graph in Neptune
-8. WHEN Knowledge_Graph is updated, THE Nyayamrit_System SHALL invalidate related cache entries
-9. THE Nyayamrit_System SHALL generate amendment reports showing changes between versions
-10. THE Nyayamrit_System SHALL enable manual review and approval before applying amendments to production
+1. THE Nyayamrit_System SHALL maintain both current and historical versions in S3_Bucket with versioning
+2. THE Nyayamrit_System SHALL store amendment history in DynamoDB with timestamps
+3. WHEN amendments are uploaded, THE Nyayamrit_System SHALL trigger Lambda_Function for document processing
+4. THE Nyayamrit_System SHALL update Knowledge_Graph in Neptune with new provisions
+5. THE Nyayamrit_System SHALL enable manual review and approval before applying amendments to production
+6. THE Nyayamrit_System SHALL log all amendment operations to CloudWatch
+7. THE Nyayamrit_System SHALL support rollback to previous document versions
+8. THE Nyayamrit_System SHALL generate simple amendment reports showing changes
+9. THE Nyayamrit_System SHALL notify administrators via email when amendments are processed
+10. THE Nyayamrit_System SHALL maintain audit trail of all amendment operations in DynamoDB
+
+**Implementation Note**: Automated daily checks using EventBridge and SNS notifications are future enhancements. Manual upload and processing is sufficient for initial deployment.
 
 ## Requirements Summary
 
-This document specifies 25 comprehensive requirements covering:
+This document specifies **16 core requirements** for immediate implementation and **12 future requirements** for enterprise roadmap:
 
-- AWS service integration (Bedrock, Neptune, Lambda, S3, ElastiCache, RDS, Cognito)
-- Security and compliance (WAF, Secrets Manager, CloudTrail, encryption, data residency)
-- Observability and monitoring (CloudWatch, X-Ray, distributed tracing)
-- Performance and scalability (auto-scaling, caching, CDN, load balancing)
-- DevOps and infrastructure (ECS Fargate, EventBridge, IaC, CI/CD)
-- Migration strategy (phased approach, backward compatibility, rollback)
-- Cost optimization (Reserved Instances, Savings Plans, lifecycle policies)
-- Disaster recovery (cross-region replication, automated backups, RPO/RTO)
+### Core Implementation (Build Now):
+1. **AWS Bedrock** - LLM provider (Claude 3 Sonnet/Haiku) with graph-constrained prompting
+2. **Amazon Neptune** - Graph database (or keep existing Neo4j for simplicity)
+3. **AWS Lambda + API Gateway** - Single Lambda function for query pipeline with rate limiting
+4. **Amazon S3** - Legal document storage with versioning and KMS encryption
+5. **Amazon DynamoDB** - Audit logs and session data with point-in-time recovery
+6. **AWS Cognito** - User authentication with JWT tokens and MFA for privileged users
 
-All requirements follow EARS patterns and INCOSE quality rules to ensure clarity, testability, and completeness. The requirements maintain the existing GraphRAG architecture and zero-hallucination guarantee while transforming Nyayamrit into a production-grade cloud-native application.
+### Supporting Core Features:
+- Performance SLAs (99.9% uptime, <100ms response time)
+- Security and compliance (encryption, data residency, IAM)
+- Basic observability (CloudWatch logging, metrics)
+- Infrastructure as code (AWS CDK/Terraform)
+- Migration strategy (phased approach, rollback capability)
+- Cost optimization (on-demand billing, lifecycle policies)
+- Simplified disaster recovery (automated backups, RPO 1hr, RTO 4hr)
+
+### Future Enterprise Roadmap (Document Only):
+- ElastiCache Redis caching
+- RDS PostgreSQL for complex queries
+- CloudWatch advanced monitoring
+- CloudTrail advanced auditing
+- WAF web application firewall
+- Secrets Manager with rotation
+- CloudFront CDN
+- ECS Fargate alternative compute
+- EventBridge event-driven workflows
+- X-Ray distributed tracing
+- SQS async processing
+- Cross-region disaster recovery
+
+All requirements follow EARS patterns and INCOSE quality rules to ensure clarity, testability, and completeness. The requirements maintain the existing GraphRAG architecture and zero-hallucination guarantee while providing a pragmatic path to AWS deployment.
